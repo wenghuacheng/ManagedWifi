@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "480166",
+    "ThreadId": "223482",
+    "Html": "<p>Hello how can i retrieve the signal strenght in dbm en not percentage</p>",
+    "PostedDate": "2010-08-13T05:56:25.603-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "490311",
+    "ThreadId": "223482",
+    "Html": "<p>Based on this example (http://managedwifi.codeplex.com/SourceControl/changeset/view/41381)</p>\r\n<p>Wlan.WlanAvailableNetwork[] networks = wlanIface.GetAvailableNetworkList(0);</p>\r\n<p>Wlan.WlanBssEntry[] redes = wlanIface.GetNetworkBssList(); //Get the atribute that you need<br><br> foreach (Wlan.WlanBssEntry network in redes)<br> {<br>&nbsp;Console.Write(&quot;Network SSID {0} RSSI {1}\\n &quot;, GetStringForSSID(network.dot11Ssid),<br>&nbsp;network.rssi);<br>&nbsp;} &nbsp;</p>\r\n<p>Vitor Madureira Sales<br>Ci&ecirc;ncia da Computa&ccedil;&atilde;o - UFV</p>",
+    "PostedDate": "2010-09-07T12:06:23.09-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

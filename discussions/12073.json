@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "39202",
+    "ThreadId": "12073",
+    "Html": "\r\nIt would be nice to provide us with an example of how to use your work. It is a very neat class, but Memory Pointers are required for almost everything and that's not really standard stuff.<br />So forgive me for my stupidity, but here's what I tried out (to scan the available network list) which seems to fail miserably...<br /><br />PS: Although this piece of code is written in vb.net, c# is just as good for me :)<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />    Dim x As New NativeWifi.WlanClient<br />    Dim y As NativeWifi.WlanClient.WlanInterface = x.Interfaces(1)<br />    Dim clH As New IntPtr<br /><br /><br />    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load<br />        y.Scan()<br /><br />        Dim uintNeg As UInt32<br /><br /><br />        Wlan.WlanOpenHandle(Wlan.WLAN<i>CLIENT</i>VERSION_LONGHORN, Nothing, uintNeg, clH)<br /><br />        Dim list As New IntPtr<br />        NativeWifi.Wlan.WlanGetAvailableNetworkList(clH, y.InterfaceGuid, NativeWifi.Wlan.WlanAvailableNetworkFlags.IncludeAllAdhocProfiles Or NativeWifi.Wlan.WlanAvailableNetworkFlags.IncludeAllManualHiddenProfiles, Nothing, list)<br />        Debug.WriteLine(list.ToString)<br /><br />        'Dim strL As Point<br /><br />        Dim b() As Byte = CType(Runtime.InteropServices.Marshal.PtrToStructure(CType(Runtime.InteropServices.Marshal.PtrToStructure(list, GetType(Wlan.WlanConnectionParameters)), Wlan.WlanConnectionParameters).dot11SsidPtr, GetType(Wlan.Dot11Ssid)), Wlan.Dot11Ssid).SSID<br />        For inti As Integer = 0 To b.Length - 1<br />            Debug.Write(Chr(b(inti)))<br />        Next<br />        Debug.WriteLine(\" \")<br /><br />        Debug.WriteLine(System.Text.Encoding.ASCII.GetString(b))<br /><br />    End Sub<br />",
+    "PostedDate": "2007-07-02T04:38:03.167-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "39962",
+    "ThreadId": "12073",
+    "Html": "<div class=\"quote\" style=\"border: dotted .1em #aaa; border-left: none; border-right: none; font-style: italic; margin: 1em 0em 2.5em 3em;padding: .2em;\"><br />It would be nice to provide us with an example of how to use your work.<br /><br /></div>You're right. Seeing how you used it, an example would've been useful here.<br /><br /><div class=\"quote\" style=\"border: dotted .1em #aaa; border-left: none; border-right: none; font-style: italic; margin: 1em 0em 2.5em 3em;padding: .2em;\"><br />It is a very neat class, but Memory Pointers are required for almost everything and that's not really standard stuff.<br /><br /></div>You should have used the WlanClient class. The Wlan class exposes the native functions, but they're more useful to me (internally, for my WlanClient implementation) than to you. Better stick to using WlanClient.<br />",
+    "PostedDate": "2007-07-06T09:38:53.533-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "41377",
+    "ThreadId": "12073",
+    "Html": "\r\nSo is it not possible to get a list of available networks using the WlanClient class? The closest I could get to a list of networks is the following:<br /><br />    Dim x As New NativeWifi.WlanClient<br />    Dim y As WlanInterface = x.Interfaces(0)<br />    For Each p As WlanProfileInfo In y.GetProfiles<br />        Console.Writeline(p.profileName)<br />        Console.Writeline(y.GetProfileXml(p.profileName))<br />    Next<br /><br />But that only appears to show the networks I've already connected to or have stored profiles for.<br /><br />How can I scan for available networks?<br /><br />Thank you for your time.<br />",
+    "PostedDate": "2007-07-17T08:00:41.183-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "41396",
+    "ThreadId": "12073",
+    "Html": "\r\nHi Gary,<br /><br />Yes, that's true - GetProfiles is not the right way to go. You should use WlanClient's Scan method. The clumsy thing about Scan is that it's asynchronous: it returns immediately, and then you should get an event (you can subscribe to one of WlanClient's events, not sure which...) and only once you get the ScanComplete notification code, only then you can call WlanGetAvailableNetworkList...<br /><br />- but guess what, I didn't include this method yet. So maybe it isn't ready for version 1.0 yet ...<br /><br />I'll try to cover this basic feature (scanning) ASAP.<br />",
+    "PostedDate": "2007-07-17T09:42:20.36-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "41398",
+    "ThreadId": "12073",
+    "Html": "\r\nThis discussion has been copied to a work item. Click here to <a href=\"http://www.codeplex.com/managedwifi/WorkItem/View.aspx?WorkItemId=3143\">go to the work item and continue the discussion</a>.<br />",
+    "PostedDate": "2007-07-17T09:43:17.427-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "65490",
+    "ThreadId": "12073",
+    "Html": "\r\nHi, for those of you who were looking for SSID list through this native wifi class, here is my example (c#):<br /><br />using System;<br />using System.Collections.Generic;<br />using System.Text;<br />using NativeWifi;<br /><br />namespace ConsoleApplication1<br />{<br />    class Program<br />    {<br />        static void Main(string[] args)<br />        {<br />            WlanClient WC = new WlanClient();<br /><br />            //We must define the flags for using the \"GetAvailableNetworkList\" function. <br />            Wlan.WlanGetAvailableNetworkFlags flag = new Wlan.WlanGetAvailableNetworkFlags();<br /><br />            //refreshing the network list.<br />            WC.Interfaces<a href=\"http://www.codeplex.com/managedwifi/Wiki/View.aspx?title=0\">0</a>.Scan();<br /><br />            //The array that contains the networks details.<br />            Wlan.WlanAvailableNetwork[] WList;<br /><br />            WList = WC.Interfaces<a href=\"http://www.codeplex.com/managedwifi/Wiki/View.aspx?title=0\">0</a>.GetAvailableNetworkList(flag);<br />            foreach (Wlan.WlanAvailableNetwork ssid in WList)<br />            {<br />                Console.WriteLine(\"SSID is : \" + Encoding.ASCII.GetString(ssid.dot11Ssid.SSID));<br />            }<br /><br />         }<br />    }<br />}<br />",
+    "PostedDate": "2007-12-31T00:36:13.38-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "106175",
+    "ThreadId": "12073",
+    "Html": "hi, <br>\r\n<br>\r\nhow to retrieve the SSIDs and RSSIs from available network using Wlan.WlanBssEntry.rssi?<br>\r\nI can do this using Wlan.WlanAvailableNetwork but the RSSIs are different compared to what I get using wifi scanner like wifisistr or net stumbler<br>\r\n<br>\r\nthanks for any help<br>\r\n<br>\r\nmasdegan<br>\r\n",
+    "PostedDate": "2008-07-21T23:55:31.423-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

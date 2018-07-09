@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "996330",
+    "ThreadId": "431933",
+    "Html": "I'm trying to find the MAC of my currently connected AP.  I'm working on a program that will show the current AP MAC while roaming from AP to AP.\r<br />\n<br />\nI found this example to get the MAC of all AP's visible but I don't understand how to specify only the AP I am connected to.\r<br />\n<br />\n<a href=\"http://managedwifi.codeplex.com/discussions/398107\" rel=\"nofollow\">http://managedwifi.codeplex.com/discussions/398107</a>\r<br />\n<br />\nI hope someone can help.\r<br />\n<br />\nUsing VB.NET.   But C# is ok too.\r<br />\n<br />\nthanks<br />\n",
+    "PostedDate": "2013-02-04T12:54:34.837-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1008349",
+    "ThreadId": "431933",
+    "Html": "I need to do the EXACT same thing (which is a big deal because it seems like no one else in the world needs to do this).\r<br />\n<br />\nWere you ever able to figure anything out about this?  Are you still working on it/interested in a solution?\r<br />\n<br />\nCan anyone who knows this API well, just say if it is even possible (through this api) to find the BSSID/mac of the specific layer 2 WAP that you are connected to the SSID through?<br />\n",
+    "PostedDate": "2013-02-28T10:03:23.077-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1010092",
+    "ThreadId": "431933",
+    "Html": "I found a couple ways to do it.  The first one is using Managed WIFI. <br />\n<pre><code>'Make sure you add a reference to the ManagedWifi.dll\nImports NativeWifi\nImports System.Text\nPublic Class Form1\n    Private Sub btnStart_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStart.Click\n        ApInfo()\n    End Sub\n    Private Sub ApInfo()\n        'This string will contain the AP's SSID.\n        Dim ApSSID As String = &quot;&quot;\n        Dim client As New WlanClient()\n        For Each wlanIface As WlanClient.WlanInterface In client.Interfaces\n            Dim networks As Wlan.WlanAvailableNetwork() = wlanIface.GetAvailableNetworkList(0)\n            For Each network As Wlan.WlanAvailableNetwork In networks\n                'This check to see if the network is connected. If it is then it grabs the SSID.\n                If network.flags = 3 Then\n                    ApSSID = GetStringForSSID(network.dot11Ssid)\n                    'Put the value in a textbox.\n                    txtSSID.AppendText(ApSSID &amp; vbCrLf)\n                End If\n            Next\n\n            Dim wlanBssEntries As Wlan.WlanBssEntry() = wlanIface.GetNetworkBssList()\n            'Now you can find the AP Mac then cross reference it to the SSID pulled earlier.\n            For Each network2 As Wlan.WlanBssEntry In wlanBssEntries\n                Dim macAddr As Byte() = network2.dot11Bssid\n                Dim tMac As String = &quot;&quot;\n                'If the SSID's match then output the result to a textbox.\n                If GetStringForSSID(network2.dot11Ssid) = ApSSID Then\n                    For i As Integer = 0 To macAddr.Length - 1\n                        tMac += macAddr(i).ToString(&quot;x2&quot;).PadLeft(2, &quot;0&quot;c).ToUpper()\n                    Next\n                    txtApMAC.AppendText(tMac &amp; vbCrLf)\n                End If\n            Next\n        Next\n    End Sub\n'Used to convert the SSID to the proper format.\n    Private Shared Function GetStringForSSID(ByVal ssid As Wlan.Dot11Ssid) As String\n        Return Encoding.ASCII.GetString(ssid.SSID, 0, CInt(ssid.SSIDLength))\n    End Function\nEnd Class</code></pre>\n\nThe other way I found was using NetSH.  You can grab the output of NetSH then reformat the output to get you what you want.  \r<br />\n<pre><code> Dim p = New Process()\np.StartInfo.FileName = &quot;cmd.exe&quot;\np.StartInfo.Arguments = (&quot;/c netsh.exe wlan show interfaces | find &quot; &amp; Chr(34) &amp; &quot;BSSID&quot; &amp; Chr(34)) 'parameters.ToString()\np.StartInfo.UseShellExecute = False\np.StartInfo.CreateNoWindow = True\np.StartInfo.RedirectStandardOutput = True\np.Start()\np.WaitForExit(30000)\nstrCurrentAP = p.StandardOutput.ReadToEnd()\nstrCurrentAP = (strCurrentAP.Substring(29))</code></pre>\n\n",
+    "PostedDate": "2013-03-04T10:08:23.56-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

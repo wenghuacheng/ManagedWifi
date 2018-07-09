@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "58795",
+    "ThreadId": "18002",
+    "Html": "\r\ni've been searching by the code and testing the relese 1.1, and i havent found a method or a property, that gives me the current conected wireles network... does thas exists and i miss it, or is not implemented?<br /><br /><br /><br />apart that, congratulations for your job on this class, it may be useful for me in a project that i'm thinking in develop...<br />[[]]'s<br />",
+    "PostedDate": "2007-11-18T22:05:32.59-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "63055",
+    "ThreadId": "18002",
+    "Html": "\r\nyes, it is there, check the Wlan.WlanAvailableNetwork.flags property. ie, <br />if (wlanAvailableNetwork.flags &amp; Wlan.WlanAvailableNetworkFlags.Connected) == Wlan.WlanAvailableNetworkFlags.Connected)                        <br />    return true;<br />",
+    "PostedDate": "2007-12-14T10:24:56.88-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "128052",
+    "ThreadId": "18002",
+    "Html": "@danblanchard:<br>\r\nHowever, if the network I am connected to uses a hidden SSID this doesn't work under XP. Though I see the hidden network, it doesn't display the connected information.<br>\r\nIf I then send the SSID I get it listed twice, one time connected and one time not connected... \r\n",
+    "PostedDate": "2008-10-27T10:34:08.95-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "507407",
+    "ThreadId": "230960",
+    "Html": "<p>Good Morning ,</p>\r\n<p><span id=\"result_box\" lang=en><span>&nbsp;Can I catch an event of an attempted connection?</span></span> ,when I run on my &quot;host&quot; wifi dll with a basic interface for printing events I don't see if a &quot;client&quot; attempt connection with a wrong password.... , but for sample I found</p>\r\n<p>Authenticating</p>\r\n<p>and</p>\r\n<p>ConnectionAttemptFail</p>\r\n<p>in Interop.cs source code file ,</p>\r\n<p>where is my mistake?</p>\r\n<p>My Best Regards and thank you in advance for a short response</p>\r\n<p>Gianmarco</p>",
+    "PostedDate": "2010-10-14T13:26:42.607-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

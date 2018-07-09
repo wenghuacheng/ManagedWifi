@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "272788",
+    "ThreadId": "79660",
+    "Html": "<p>Hi,</p>\r\n<p>I have used the Managed Wifi API library in an open-source project and I am very pleased with it.</p>\r\n<p>However it seems that sometimes, after my application runs for a prolonged period of time, wifi events (network connected/disconnected etc') stop firing.</p>\r\n<p>This may be a problem with my own code but I'm just wondering if anyone else has experienced this problem.</p>\r\n<p>&nbsp;</p>\r\n<p>Thank you.</p>",
+    "PostedDate": "2010-01-04T01:15:52.28-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "273087",
+    "ThreadId": "79660",
+    "Html": "<p>False alarm. I accidentally let my WlanClient be garbage-collected.</p>\r\n<p>I fixed the problem with my code and everything works like a charm.</p>",
+    "PostedDate": "2010-01-04T14:51:58.103-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The Dot11Ssid struct should be tagged with a [StructLayout(LayoutKind.Sequential)] attribute. Otherwise, someone is going to run Resharper on Interop.cs, and Resharper is going to rearrange the two members of this struct, causing the SSID name to contain the length bytes and the length to show up as 0 or garbage.",
+    "LastUpdatedDate": "2014-12-24T07:43:59.377-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2014-12-24T07:41:54.203-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Dot11Ssid needs a StructLayout to avoid Resharper damage",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 25887
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

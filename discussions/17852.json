@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "58305",
+    "ThreadId": "17852",
+    "Html": "\r\nIt is possible to get all mac addresses of all available networks ?<br /><br />regards. <br />",
+    "PostedDate": "2007-11-14T20:09:49.937-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "70784",
+    "ThreadId": "17852",
+    "Html": "\r\nI agree with cbrotas, it will be perfect if this piece of code can also get all mac addresses of all available networks. <br />",
+    "PostedDate": "2008-01-30T03:37:24.933-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "70800",
+    "ThreadId": "17852",
+    "Html": "\r\nuse native wifi library (microsoft) to get that information and also more information about all available ap's. <br />",
+    "PostedDate": "2008-01-30T05:39:50.417-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "70982",
+    "ThreadId": "17852",
+    "Html": "\r\nFirst i want to thank with qucik replies. Yes i have a look on the native wifi library of windows but when i am trying to use public Wlan.WlanBssEntry[] GetNetworkBssList() method of this API, i get a \"The request not supported\" exception in the Wlan.WlanGetNetworkBssList row. In many forums it is declared that this action is supported for Windows vista platform? <br /><br />First question is, am i using the right method to find Mac's of ap's? And the second is, using vista will resolve my problem?<br />",
+    "PostedDate": "2008-01-30T23:19:34.557-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "71014",
+    "ThreadId": "17852",
+    "Html": "\r\nyou welcome.<br /><br />you right about vista, but that method work in windows XP professional with service pack 2 and KB918997 update, some time you need also msxml6.msi.<br /><br />this and example to use native wifi and get all ap's info.<br /><br />        /// Wlan API client.<br />        /// &lt;/summary&gt;<br />        private WlanClient wlanClient;<br />        /// &lt;summary&gt;<br />        /// Wireless interface.<br />        /// &lt;/summary&gt;<br />        private WlanClient.WlanInterface wlanInterface;<br />        /// &lt;summary&gt;<br />        /// Wireless interface list.<br />        /// &lt;/summary&gt;<br />        private WlanClient.WlanInterface[] wlanInterfaces;<br />        /// &lt;summary&gt;<br />        /// Available networks lists.<br />        /// &lt;/summary&gt;<br />        private Wlan.WlanAvailableNetwork[] availableNets;<br />        /// &lt;summary&gt;<br />        /// Access Point list.<br />        /// &lt;/summary&gt;<br />        private ArrayList aps;<br /><br /><br />        /// &lt;summary&gt;<br />        /// Search for available access points.<br />        /// &lt;/summary&gt;<br />        public void scanAps()<br />        {<br />            if (wlanInterfaces.Length != 0)<br />            {<br />                wlanInterface.Scan();<br />                availableNets = wlanInterface.GetAvailableNetworkList(<br />                    Wlan.WlanGetAvailableNetworkFlags.IncludeAllAdhocProfiles);<br /><br />                updateAPsList();<br />            }<br />        }<br /><br /><br />        /// &lt;summary&gt;<br />        /// Get access point recieved signal.<br />        /// &lt;/summary&gt;<br />        /// &lt;param name=\"index\"&gt;AP index in array&lt;/param&gt;<br />        /// &lt;returns&gt;Recieved Signal&lt;/returns&gt;<br />        private int getApRS(int index)<br />        {<br />            return (int)availableNets<a href=\"http://www.codeplex.com/managedwifi/Wiki/View.aspx?title=index\">index</a>.wlanSignalQuality;<br />        }<br /><br />        /// &lt;summary&gt;<br />        /// Add new access points to array list, and update<br />        /// recieved signal in old access points in the array.<br />        /// &lt;/summary&gt;<br />        private void updateAPsList()<br />        {<br />            if (aps.Count == 0)<br />            {<br />                for (int i = 0; i &lt; availableNets.Length; i++)<br />                {<br />                    addAP(i);<br />                }<br />            }<br />            else<br />            {<br />                foreach (AP ap in aps)<br />                {<br />                    ap.RS = 0;<br />                }<br />                for (int i = 0; i &lt; availableNets.Length; i++)<br />                {<br />                    bool newAP = true;<br /><br />                    foreach (AP ap in aps)<br />                    {<br />                        if (ap.SSID.Equals(getApSSID(i)))<br />                        {<br />                            updateAPRS(i);<br />                            newAP = false;<br />                        }                        <br />                    }<br />                    if (newAP)<br />                    {<br />                        addAP(i);<br />                    }<br />                }<br />            }<br /><br />        }<br />",
+    "PostedDate": "2008-01-31T04:05:08.33-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "122606",
+    "ThreadId": "17852",
+    "Html": "Is anybody successful in gettung mac address for&nbsp;all the networks&nbsp;in XP using <span style=\"font-size:13px\">GetNetworkBssList API. I am getting not supported error. I have MSXML6 and latest KB is installed in XP to make it compatible to run wireless API's. Is there any other way to get the mac address in for all the wireless networks?</span>\r\n",
+    "PostedDate": "2008-10-03T02:01:12.307-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1074389",
+    "ThreadId": "451776",
+    "Html": "Hi. \r<br />\n<br />\nAre displayed correctly all data, excepting when the authentication is &quot;IEEE80211_SharedKey&quot;, which marks it as if it were &quot;IEEE80211_Open&quot; and of course, when connected, not create good profile and you can not make the connection.\r<br />\n<br />\nPublic Enum Dot11AuthAlgorithm As UInteger<br />\n<pre><code>    IEEE80211_Open = 1\n    IEEE80211_SharedKey = 2\n    IHV_End = &amp;HFFFFFFFFUI\n    IHV_Start = &amp;H80000000UI\n    RSNA = 6\n    RSNA_PSK = 7\n    WPA = 3\n    WPA_None = 5\n    WPA_PSK = 4\nEnd Enum\n</code></pre>\n\nA screenshot to make it clearer:\r<br />\n<br />\n<img src=\"http://i.imgur.com/JiApnHq.jpg\" alt=\"Image\" />\r<br />\n<br />\nThe network that I marked in orange, in &quot;Authentication&quot; should be a &quot;2&quot; as in other programs of this type if it is recognized as &quot;IEEE80211_SharedKey&quot;.<br />\n",
+    "PostedDate": "2013-07-29T10:13:43.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

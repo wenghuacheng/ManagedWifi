@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "436641",
+    "ThreadId": "210891",
+    "Html": "<p>I know this may sound like a stupid question, so bear with me but does anyone know what the mac string value is suppose to be? In the sample app it is &quot;52544131303235572D454137443638&quot;&nbsp; Is it the mac address for the PC, for the router or is it the mac address for the&nbsp; wireless adapter in the pc? I have tried all of these and I still get an exception</p>",
+    "PostedDate": "2010-04-28T10:20:19.987-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "436810",
+    "ThreadId": "210891",
+    "Html": "<p>Nevermind I figured it out It was suppose to be the SSID in hex</p>",
+    "PostedDate": "2010-04-28T17:36:35.827-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "508349",
+    "ThreadId": "210891",
+    "Html": "<blockquote style=\"border:solid .1em #ccc;font-style:italic;margin:.25em 1em 0 1em;padding:0 .25em 0 .25em\"><strong>guywhocodes wrote:</strong><br>\r\n<p>Nevermind I figured it out It was suppose to be the SSID in hex</p>\r\n</blockquote>\r\n<p>how us to know SSID in Hex ? you're convert it into hex or it is provided by this example</p>",
+    "PostedDate": "2010-10-16T17:25:14.257-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

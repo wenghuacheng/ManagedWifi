@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "563112",
+    "ThreadId": "245229",
+    "Html": "\r\n<p>I apologize for my English I wanted to know how I can get the mac of the networks detected.</p>\r\n<p>&nbsp;if I run the following code I get the mac of my card, but for those found?</p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><div style=\"color:black; background-color:white\"><pre><div style=\"color:black; background-color:white\"><pre>  <span style=\"color:blue\">Dim</span> wlanIface <span style=\"color:blue\">As</span> WlanClient.WlanInterface = client.Interfaces(0)\r\n            <span style=\"color:blue\">Dim</span> MAC = wlanIface.NetworkInterface.GetPhysicalAddress.ToString\r\n            <span style=\"color:blue\">Dim</span> adMAC = <span style=\"color:#a31515\">&quot;&quot;</span>\r\n            <span style=\"color:blue\">For</span> i = 1 <span style=\"color:blue\">To</span> MAC.Length <span style=\"color:blue\">Step</span> 2\r\n                adMAC &amp;= MAC.Substring(i - 1, 1) &amp; MAC.Substring(i, 1) &amp; <span style=\"color:#a31515\">&quot;:&quot;</span>\r\n            <span style=\"color:blue\">Next</span>\r\n            Label2.Text = adMAC.Remove(adMAC.Length - 1)\r\n</pre>\r\n</div>\r\n</pre>\r\n</div>\r\n</pre>\r\n</div>\r\n",
+    "PostedDate": "2011-02-08T23:23:56.28-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

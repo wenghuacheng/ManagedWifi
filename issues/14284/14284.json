@@ -1,0 +1,110 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "This is a Low priority issues as it only happens after my code has been running most of the day.  \nIn the Wlan.WlanNotificationCodeAcm.ScanFail case the following line fails on occasion\nint expectedSize = Marshal.SizeOf(typeof (Wlan.WlanReasonCode));\nWith something Like it cannot find the size of the unmanaged code.  I will update with an exact error the next time it happens",
+    "LastUpdatedDate": "2015-04-22T23:44:32.477-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2009-09-28T18:59:52.72-07:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Unhandled Exception in OnWlanNotification",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 14284
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Here is the error\r\nType 'NativeWifi.Wlan+WlanReasonCode' cannot be marshaled as an unmanaged structure; no meaningful size or offset can be computed.\r\n\r\nIt seems to happen on occasion when the computer resumes from standby.  \r\nI am creating an application that runs in the background and monitors the internet connection and reconnects when disconnected and logins to a gateway redirect page.  (The host bumps you off fairly often)  On Vista OS this requires you to disconnect and reconnect the WiFi.",
+      "PostedDate": "2009-10-06T10:21:13.417-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "A few lines later I'm performing Marshal.ReadInt32, so I guess replacing the problematic line with:\r\n int expectedSize = Marshal.SizeOf(typeof (int));\r\nwill only serve it justice.\r\n\r\nI've committed this to SVN, but haven't yet tested it.\r\nI should get some PC with a WiFi adapter to test the library (since nowadays, my PC is a Mac).",
+      "PostedDate": "2009-11-19T05:35:22.563-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "A few lines later I'm performing Marshal.ReadInt32, so I guess replacing the problematic line with:\r\n int expectedSize = Marshal.SizeOf(typeof (int));\r\nwill only serve it justice.\r\n\r\nI've committed this to SVN, but haven't yet tested it.\r\nI should get some PC with a WiFi adapter to test the library (since nowadays, my PC is a Mac).",
+      "PostedDate": "2009-11-19T05:35:26.6-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Fixed on changeset 41381",
+      "PostedDate": "2009-11-19T05:41:25.19-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-11-19T05:41:25.823-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:44:45.49-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I've been writing an application that disables/enables the wireless adapter and afterward it checks RSSI. I've been able to trigger this exception fairly quickly. Changing the line to typeof (int) does fix the issue.",
+      "PostedDate": "2013-03-13T07:21:34.29-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:23:20.077-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:23:20.2-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-06-14T00:29:03.437-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I have downloaded and compiled the latest source code but dispose is not available.  When will the patch be applied to the project?\r\n\r\nThanks for the hard work.",
+      "PostedDate": "2014-08-28T08:43:04.93-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Sorry... disregard the last post as it was posted on the wrong work item.",
+      "PostedDate": "2014-08-28T08:44:06.99-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I am using Managed Wifi 1.1.0 in a vbnet project.\nThe package has been installed with Nuget.\r\n\r\nI suffer from this error when the wlan interface is re-enabled. Unfortunately, it seems from the previous comment that this problem should be fixed in the current version.\r\n\r\nMay I ask you some help?",
+      "PostedDate": "2015-03-16T01:56:55.797-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I've stumbled upon the same exception when trying to connect to a non-existent SSID. The fix suggested above does the trick, but I prefer the following modification to keep Managed Wifi code consistent:\r\n\r\nint expectedSize = Marshal.SizeOf(Enum.GetUnderlyingType(typeof(Wlan.WlanReasonCode)));\r\n\r\nAdditionaly, one may explicitly define the WlanReasonCode enumeration base type, just to be on the safe side:\r\n\r\npublic enum WlanReasonCode: int\r\n\r\nThat's my two cents on the subject.",
+      "PostedDate": "2015-04-22T23:44:32.477-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

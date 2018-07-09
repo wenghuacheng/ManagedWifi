@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "493437",
+    "ThreadId": "227202",
+    "Html": "<p>Hi all,</p>\r\n<p>i am trying to connect to wifi using the wifi api but i couldn't get connected so far. Can you help me about it?</p>\r\n<p>My system in also win7 with VS2010 .net4.0. I disabled ethernet, disconneted WIFI and then run the code.<br>My code lists all the wifi, also set up the profile correctly (the profile is shown in win7 also) but when try to connect, it stops at code &quot;case Wlan.WlanNotificationCodeAcm.ScanFail:&quot; in function: OnWlanNotification.<br>&nbsp;<br>Question: 1) do i need to disable win7 wifi management? 2) if i don't have to disable win7 wifi management, when my code connects to wifi successfully, does the win7 wifi status show connected also? 3) can anyone send me some working sample code or do you also have any problems when you try to connect to wifi?</p>\r\n<p>many thanks!</p>",
+    "PostedDate": "2010-09-14T11:08:32.407-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "493522",
+    "ThreadId": "227202",
+    "Html": "<p>i got it. thanks!</p>",
+    "PostedDate": "2010-09-14T14:15:45.903-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "508347",
+    "ThreadId": "227202",
+    "Html": "<p>Can you explain how you could solve your problem ? i'll try same things</p>",
+    "PostedDate": "2010-10-16T17:19:18.44-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "508435",
+    "ThreadId": "227202",
+    "Html": "<span style=\"font-size:10pt;font-family:Arial;font-weight:Normal\">The variable mac(maybe) is not macbut actually the heX of ssid</span><br><br><hr><span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">From: </span><span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">jeje86 &lt;notifications@codeplex.com&gt;</span><br><span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">Sent: </span><span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">2010年10月16日 8:19 PM</span><br><span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">To: </span><span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">davidshen2001@gmail.com</span><br><span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">Subject: </span><span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">Re: manage wifi api connect failed [managedwifi:227202]</span><br><br><p>From: jeje86</p><div id=ThreadNotificationPostBody><p>Can you explain how you could solve your problem ? i'll try same things</p></div>",
+    "PostedDate": "2010-10-17T05:45:29.933-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "639351",
+    "ThreadId": "227202",
+    "Html": "<p>I don't understand this. When you translate \"Cheesecake\" into hex you'll get \"43 68 65 65 73 65 63 61 6b 65\", don't you?</p>",
+    "PostedDate": "2011-07-08T03:11:57.73-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

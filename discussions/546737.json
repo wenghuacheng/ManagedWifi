@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1250205",
+    "ThreadId": "546737",
+    "Html": "I am looking to get the proper network information for networks. Using the below calls which each gives some duplication information but not what I am looking for. There has to be a way to get the MAC from both of them however this is what I am getting: \r<br />\n<br />\n<br />\nWlan.WlanAvailableNetwork[] ntwks = selectedInterface.GetAvailableNetworkList(Wlan.WlanGetAvailableNetworkFlags.IncludeAllAdhocProfiles);\r<br />\n<br />\nWlan.WlanBssEntry[] wlanBssEntries = selectedInterface.GetNetworkBssList();\r<br />\n<br />\nUsing the SSID if I foreach both can be incorrect as two or more can have the same name i.e. &quot;linksys&quot;. I need to use the mac to join on. However it only seems to exist in the wlanBssEntries as BitConverter.ToString(wlanBssEntry.dot11Bssid)\r<br />\n<br />\nIs there something I am missing? I would like to get  n.dot11DefaultAuthAlgorithm and dot11DefaultCipherAlgorithm for the networks in wlanBssEntries by an unique Id like the MAC. I was thinking of using the name and signal strength or something similar.<br />\n",
+    "PostedDate": "2014-05-27T13:33:41.34-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

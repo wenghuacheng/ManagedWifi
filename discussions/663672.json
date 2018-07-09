@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1497857",
+    "ThreadId": "663672",
+    "Html": "Here is my profile.<br />\n<pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;\n&lt;WLANProfile xmlns=&quot;http://www.microsoft.com/networking/WLAN/profile/v1&quot;&gt;\n    &lt;name&gt;Filtered&lt;/name&gt;\n    &lt;SSIDConfig&gt;\n        &lt;SSID&gt;\n            &lt;hex&gt;46696C7465726564&lt;/hex&gt;\n            &lt;name&gt;Filtered&lt;/name&gt;\n        &lt;/SSID&gt;\n    &lt;/SSIDConfig&gt;\n    &lt;connectionType&gt;ESS&lt;/connectionType&gt;\n    &lt;connectionMode&gt;manual&lt;/connectionMode&gt;\n    &lt;MSM&gt;\n        &lt;security&gt;\n            &lt;authEncryption&gt;\n                &lt;authentication&gt;WPA2PSK&lt;/authentication&gt;\n                &lt;encryption&gt;AES&lt;/encryption&gt;\n                &lt;useOneX&gt;false&lt;/useOneX&gt;\n            &lt;/authEncryption&gt;\n            &lt;sharedKey&gt;\n                &lt;keyType&gt;passPhrase&lt;/keyType&gt;\n                &lt;protected&gt;false&lt;/protected&gt;\n                &lt;keyMaterial&gt;testtest&lt;/keyMaterial&gt;\n            &lt;/sharedKey&gt;\n        &lt;/security&gt;\n    &lt;/MSM&gt;\n    &lt;MacRandomization xmlns=&quot;http://www.microsoft.com/networking/WLAN/profile/v3&quot;&gt;\n        &lt;enableRandomization&gt;false&lt;/enableRandomization&gt;\n        &lt;randomizationSeed&gt;2852614770&lt;/randomizationSeed&gt;\n    &lt;/MacRandomization&gt;\n&lt;/WLANProfile&gt;</code></pre>\n\n",
+    "PostedDate": "2017-08-28T21:00:56.077-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

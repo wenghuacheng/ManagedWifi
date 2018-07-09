@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "639546",
+    "ThreadId": "264448",
+    "Html": "\r\n<p>Hi ,&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>the example in &nbsp;<a href=\"http://managedwifi.codeplex.com/SourceControl/changeset/view/41381#213980\">http://managedwifi.codeplex.com/SourceControl/changeset/view/41381#213980</a>&nbsp;gives us a view of how to connect to a SSID with WEP security .&nbsp;</p>\r\n<p>I would like to have to some pointers as to what would need to change if we need to connect to a known SSID &quot;without&quot; WEP security ..&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Please help&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>--V</p>\r\n",
+    "PostedDate": "2011-07-08T09:51:46.07-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

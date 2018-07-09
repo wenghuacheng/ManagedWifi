@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "639395",
+    "ThreadId": "264406",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>&nbsp;</p>\r\n<p>I want to check if adhoc networks are supported by this API? When I'm reading existing networks by this procedure</p>\r\n<p>&nbsp;</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:blue\">foreach</span> (Wlan.WlanProfileInfo profileInfo <span style=\"color:blue\">in</span> wlanIface.GetProfiles())\r\n                {\r\n                    <span style=\"color:blue\">string</span> name = profileInfo.profileName; <span style=\"color:green\">// this is typically the network's SSID</span>\r\n                    <span style=\"color:blue\">string</span> xml = wlanIface.GetProfileXml(profileInfo.profileName);\r\n                }\r\n</pre>\r\n</div>\r\n<p></p>\r\n<p>all profiles are listed excepted the adhoc networks. So I have no idea how to build a adhoc profile.</p>\r\n<p>Perhaps someone has an idea.</p>\r\n<p>Nice weekend</p>\r\n",
+    "PostedDate": "2011-07-08T05:06:54.78-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1138167",
+    "ThreadId": "264406",
+    "Html": "<pre><code>Wlan.WlanAvailableNetwork[] networks = wlanIface.GetAvailableNetworkList(0);</code></pre>\n\nand this<br />\n<pre><code>        /// &lt;summary&gt;\n        /// Defines flags passed to &lt;see cref=&quot;WlanGetAvailableNetworkList&quot;/&gt;.\n        /// &lt;/summary&gt;\n        [Flags]\n        public enum WlanGetAvailableNetworkFlags\n        {\n            /// &lt;summary&gt;\n            /// Include all ad-hoc network profiles in the available network list, including profiles that are not visible.\n            /// &lt;/summary&gt;\n            IncludeAllAdhocProfiles = 0x00000001,\n            /// &lt;summary&gt;\n            /// Include all hidden network profiles in the available network list, including profiles that are not visible.\n            /// &lt;/summary&gt;\n            IncludeAllManualHiddenProfiles = 0x00000002\n        }</code></pre>\n\n",
+    "PostedDate": "2013-12-19T04:00:39.587-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

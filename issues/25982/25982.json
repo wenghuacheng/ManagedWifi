@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I try to start app in my VS2013 in Windows 8.1 and i got this error in WlanClient method:\n\nAn unhandled exception of type 'System.ComponentModel.Win32Exception' occurred in ManagedWifi.dll\n\nAdditional information: The service has not been started",
+    "LastUpdatedDate": "2017-06-27T09:40:21.763-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2015-02-13T02:54:56.79-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Win32Exception was unhandled",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 25982
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I am getting the same error. Win 10, VS 2017, WinForms.",
+      "PostedDate": "2017-06-27T09:40:21.763-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

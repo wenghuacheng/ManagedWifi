@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1137841",
+    "ThreadId": "474690",
+    "Html": "I wish to create a wireless lan, my only way to do this is via this code:<br />\n<pre><code>     Process p1 = new Process();\n     p1.StartInfo.FileName = &quot;netsh.exe&quot;;\n     p1.StartInfo.Arguments = &quot;wlan set hostednetwork mode=allow ssid=sha key=12345678&quot;;            \n     p1.StartInfo.UseShellExecute = false;\n     p1.StartInfo.RedirectStandardOutput = true;\n     p1.Start();\n     ...</code></pre>\n\nBut it needs to be executed as administrator, so now I'm searching for other way. Can this library do this?<br />\n",
+    "PostedDate": "2013-12-18T13:52:36.723-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

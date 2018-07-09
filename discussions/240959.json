@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "545960",
+    "ThreadId": "240959",
+    "Html": "\r\n<p>I want to detect the network type (802.11a, 802.11b, etc.) using the PHY type.&nbsp; I am able to detect single types, but if I set my AP to mixed mode (802.11b/802.11g), the PHY type returned correspond to 802.11g and the &quot;more phy types&quot; flag is false.&nbsp;\r\n Anybody have an idea on how to do this?</p>\r\n",
+    "PostedDate": "2011-01-08T07:54:43.103-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

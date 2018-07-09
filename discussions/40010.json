@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "132816",
+    "ThreadId": "40010",
+    "Html": "Hi,<br>\r\nCan anyone give an idea on how to disable other supplicants / wireless managers ?<br>\r\nI built a supplicant based on the wifi api, but when I install it on a system that has a different supplicant, it fails to run.<br>\r\n<br>\r\nThanks.\r\n",
+    "PostedDate": "2008-11-15T09:33:18.847-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

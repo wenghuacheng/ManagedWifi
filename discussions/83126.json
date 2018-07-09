@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "285697",
+    "ThreadId": "83126",
+    "Html": "<p>I have make a small application (in c#) which scans periodically the available networks.</p>\r\n<p>The application works the 99% of the time, but sometimes when the connection goes down, a windows error appear. I try putting try catch everywhere, but I didn't work.</p>\r\n<p>Some test later I can say that this application, when the connection goes down sometimes gives an error:</p>\r\n<p style=\"padding-left:30px\"><span style=\"color:#0000ff\"><em>class Program<br></em></span></p>\r\n<p style=\"padding-left:30px\"><span style=\"color:#0000ff\"><em>{<br>&nbsp;&nbsp;&nbsp; static void Main(string[] args)<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WlanClient client = new WlanClient();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while (true)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(&quot;Interface: &quot; + client.Interfaces.Length);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thread.Sleep(500);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp; }<br>}</em></span></p>\r\n<p>&iquest;Any solution? I tried putting try catch, but it didn't work.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-02-04T02:38:05.547-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

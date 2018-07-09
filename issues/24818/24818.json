@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "string profileName = \"Cheesecake\"; // this is also the SSID\n                string mac = \"52544131303235572D454137443638\";\n                string key = \"hello\";\n                string profileXml = string.Format(\"<?xml version=\\\"1.0\\\"?><WLANProfile xmlns=\\\"http://www.microsoft.com/networking/WLAN/profile/v1\\\"><name>{0}</name><SSIDConfig><SSID><hex>{1}</hex><name>{0}</name></SSID></SSIDConfig><connectionType>ESS</connectionType><MSM><security><authEncryption><authentication>open</authentication><encryption>WEP</encryption><useOneX>false</useOneX></authEncryption><sharedKey><keyType>networkKey</keyType><protected>false</protected><keyMaterial>{2}</keyMaterial></sharedKey><keyIndex>0</keyIndex></security></MSM></WLANProfile>\", profileName, mac, key);\n                wlanIface.SetProfile( Wlan.WlanProfileFlags.AllUser, profileXml, true );\n                wlanIface.Connect( Wlan.WlanConnectionMode.Profile, Wlan.Dot11BssType.Any, profileName );",
+    "LastUpdatedDate": "2013-10-19T04:19:15.733-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2013-10-19T04:16:25.8-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "How to connect wifi without using following code?",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 24818
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I found this code from the MangedWifi example code but for me it is not useful.. \nAny help would be appreciable.",
+      "PostedDate": "2013-10-19T04:19:15.733-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "478267",
+    "ThreadId": "222976",
+    "Html": "<p>I have downloaded the example and loaded it in the Visual C# window.</p>\r\n<p>When I go to run it, I get the following error;</p>\r\n<p>'Win32 Exception was Unhandled' at the following lines of code;</p>\r\n<p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre>Wlan.ThrowIfError(\r\nWlan.WlanOpenHandle(Wlan.WLAN_CLIENT_VERSION_XP_SP2, IntPtr.Zero, <span style=\"color:blue\">out</span> negotiatedVersion, <span style=\"color:blue\">out</span> clientHandle));\r\n</pre>\r\n</div>\r\n</p>\r\n<p>I am running Windows XP sp3</p>",
+    "PostedDate": "2010-08-09T13:14:16.327-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "479834",
+    "ThreadId": "222976",
+    "Html": "Sorted.  The wifi had to be enabled and a valid profile already had to exist.",
+    "PostedDate": "2010-08-12T11:01:20.517-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "605568",
+    "ThreadId": "222976",
+    "Html": "<p>I am facing the same.</p>\r\n<p>Using WinXP sp3 and not able to get code running.</p>\r\n<p>&nbsp;</p>\r\n<p>Sure I have wifi enabled and in use. Valid profile? what you mean?</p>",
+    "PostedDate": "2011-05-01T12:08:32.763-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "639346",
+    "ThreadId": "222976",
+    "Html": "<p>Do I have to use a profile? Is there the possibility to set the WIFI parameters in the code and dispense with a profile?</p>\r\n<p>When I use the function .SetProfile and I'm using the example data (Cheesecake, mac and \"hello\" for the key\") the functions works. If I change the SSID it's also working but when I'm changing either the key or the mac function failed. What can I do?</p>",
+    "PostedDate": "2011-07-08T02:55:01.403-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

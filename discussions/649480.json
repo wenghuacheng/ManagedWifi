@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1457642",
+    "ThreadId": "649480",
+    "Html": "I have a timer that checks for all available WiFi networks every so often.  I need to detect when new ones show up.  I start my app, then turn on a new network and don't see it show up in the list.  As soon as I open the Windows WiFi network list, it appears in my app.\r<br />\n<br />\nInitially I figured I was doing something wrong with the code, so I looked for another example and found this <a href=\"https://github.com/8/WifiEnumerator\" rel=\"nofollow\">https://github.com/8/WifiEnumerator</a> which suffers from the exact same problem.\r<br />\n<br />\nI am working with Windows 7.  I can reproduce the problem with several different networks.  Is there some Windows setting that is causing this?  Is there a way around this?<br />\n",
+    "PostedDate": "2015-12-31T07:54:54.37-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1492288",
+    "ThreadId": "649480",
+    "Html": "Hi,\r<br />\n<br />\nI go exactly the same problem. Not sure what's causing the problem. A Windows setting or a coding problem?\r<br />\n<br />\nI am using Windows 10. Did you end to find something about it?\r<br />\n<br />\nThanks!<br />\n",
+    "PostedDate": "2017-02-06T18:13:32.13-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1492293",
+    "ThreadId": "649480",
+    "Html": "So I don't know what's your objective..but I kind found an easy solution.\r<br />\n<br />\nIf you have default/automatically defined Wireless Connection Network, just go to Control Panel\\Network and Internet\\Network Connections, select the Wi-Fi adapter, Status, Wireless Properties:\r<br />\nThick the box: &quot;Look for other wireless network while connected to this network&quot;. Did some small test seems to be working fine.\r<br />\n<br />\nBut will depend on what you trying to achieve. \r<br />\n<br />\nCheers!<br />\n",
+    "PostedDate": "2017-02-06T20:28:27.2-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1224670",
+    "ThreadId": "539556",
+    "Html": "Hello, I'm using Managed Wifi API, it's very useful.\r<br />\n<br />\nI want to judge Wifi AP whether stealth AP.\r<br />\nHow Can I judge that?\r<br />\nnow, I am coding as below.\r<br />\n<br />\nIs this correct?\r<br />\nWhen I got stealth Wifi AP information, SSID has multiple or continuous one \\0.\r<br />\nFor this reason, I am judged on whether or not \\0.<br />\n<pre><code>string result_ssid;\nWlan.WlanBssEntry[] wlanBssEntries = wlanIface.GetNetworkBssList();\nforeach (Wlan.WlanBssEntry network in wlanBssEntries)\n{\n    Wlan.Dot11Ssid ssid = network.dot11Ssid;\n\n    string ssid_str =  Encoding.ASCII.GetString(ssid.SSID, 0, (int)ssid.SSIDLength);\n    //judge Wifi AP is stealth or not. \n    if (ssid_str.LastIndexOf(&quot;\\0&quot;) &gt;= 0){\n        result_ssid= &quot;stealth&quot;;\n    }\n    else{\n        result_ssid= ssid_str;\n    }\n}</code></pre>\n\nregards.<br />\n",
+    "PostedDate": "2014-03-19T23:11:55.117-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

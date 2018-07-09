@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "'Value of type Integer cannot be converted to 'NativeWifi.Wlan.Dot11OperationMode'.'\n\nThat is the error. Can I get some support?\n\nRegards,\niProgramIt",
+    "LastUpdatedDate": "2016-02-07T01:20:38.743-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2016-02-07T01:20:38.743-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Ported to VB.NET..1 Error",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 65080
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

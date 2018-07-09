@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi,\nI want to connect to ad-hoc network on another laptop by using C#, but when I try follow sample code, all I recieve is this make a new ad-hoc network and connect to it. my code is:\n\n            WlanClient client = new WlanClient();\n            foreach ( WlanClient.WlanInterface wlanIface in client.Interfaces )\n            {\n                // Lists all networks with WEP security\n                Wlan.WlanAvailableNetwork[] networks = wlanIface.GetAvailableNetworkList( 0 );\n                foreach ( Wlan.WlanAvailableNetwork network in networks )\n                {\n                    if ( GetStringForSSID(network.dot11Ssid).Equals( \"Cheesecake\" ) )\n                    {\n                             // Connects to a known network with WEP security\n                            string profileName = \"Cheesecake\"; // this is also the SSID\n                            string mac = \"52544131303235572D454137443638\";\n                            string key = \"hello\";\n                            string profileXml = string.Format( \"<?xml version=\\\"1.0\\\"?><WLANProfile xmlns=\\\"http://www.microsoft.com/networking/WLAN/profile/v1\\\"><name>{0}</name><SSIDConfig><SSID><hex>{1}</hex><name>{0}</name></SSID></SSIDConfig><connectionType>IBSS</connectionType><MSM><security><authEncryption><authentication>open</authentication><encryption>WEP</encryption><useOneX>false</useOneX></authEncryption><sharedKey><keyType>networkKey</keyType><protected>false</protected><keyMaterial>{2}</keyMaterial></sharedKey><keyIndex>0</keyIndex></security></MSM></WLANProfile>\", profileName, mac, key );\n                            wlanIface.SetProfile( Wlan.WlanProfileFlags.AllUser, profileXml, true );\n                           wlanIface.Connect( Wlan.WlanConnectionMode.Profile, Wlan.Dot11BssType.Any, profileName );\n                           Console.ReadLine();\n            \n            }\n\nHow I can connect to ad-hoc network that on another computer. This code is make a new ad-hoc on this computer and connect them only. What I made a misstake?",
+    "LastUpdatedDate": "2014-06-09T08:49:26.1-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2013-09-04T18:41:44.097-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "How to conntect to ad-hoc network on another computer programatically?",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 24679
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1067842",
+    "ThreadId": "449887",
+    "Html": "Hi,\r<br />\nI'm looking for a way to retrieve beacons data.\r<br />\nI figured the data should be available in WlanBssEntry however all I can get is it's size and offset.\r<br />\n<br />\nWhat I was expecting is something like this:<br />\n<pre><code>            WlanClient client = new WlanClient();\n            WlanClient.WlanInterface wlanIface = client.Interfaces[0]; // assume this is the only interface I have for the sake of this example\n\n            Wlan.WlanBssEntry[] bssEntries = wlanIface.GetNetworkBssList();\n            foreach (Wlan.WlanBssEntry bssEntry in bssEntries)\n            {\n                uint dataOffset = bssEntry.ieOffset; // this one exists\n                uint dataSize = bssEntry.ieSize; // this one exists\n                byte[] beaconData = bssEntry.ieData; // this one DOESNT exists!!!\n            }\n</code></pre>\n\nAny alternative to retrieve the beacons data using C# is much appreciated.\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2013-07-13T03:09:09.123-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1074551",
+    "ThreadId": "449887",
+    "Html": "Hi.\r<br />\n<br />\nI use the api in vb.net including this Function:\r<br />\n<br />\nPrivate Bss_Entry As Wlan.WlanBssEntryN()\r<br />\n<br />\n   Private Function ConvertBssListPtr(ByVal bssListPtr As IntPtr) As Wlan.WlanBssEntryN()<br />\n<pre><code>    Dim header As Wlan.WlanBssListHeader = DirectCast(Marshal.PtrToStructure(bssListPtr, GetType(Wlan.WlanBssListHeader)), Wlan.WlanBssListHeader)\n    Dim num As Long = bssListPtr.ToInt64() + Marshal.SizeOf(GetType(Wlan.WlanBssListHeader))\n    Dim entryArray As Wlan.WlanBssEntryN() = New Wlan.WlanBssEntryN(header.numberOfItems - 1) {}\n\n    For i As Integer = 0 To header.numberOfItems - 1\n        entryArray(i) = New Wlan.WlanBssEntryN(Marshal.PtrToStructure(New IntPtr(num), GetType(Wlan.WlanBssEntry)))\n\n        Dim size As Integer = CInt(entryArray(i).BaseEntry.ieSize)\n        entryArray(i).IEs = New Byte(size - 1) {}\n\n        Marshal.Copy(New IntPtr(num + entryArray(i).BaseEntry.ieOffset), entryArray(i).IEs, 0, size)\n\n        num += Marshal.SizeOf(GetType(Wlan.WlanBssEntry))\n\n    Next\n\n    Return entryArray\n\nEnd Function\n</code></pre>\n\nIn the Form1:\r<br />\n<br />\nitem1.SubItems.Add(ByteArrayToString(Bss_Entry(i).IEs))\r<br />\n<br />\n Public Shared Function ByteArrayToString(ByVal ba As Byte()) As String<br />\n<pre><code>    Dim hex As New StringBuilder(ba.Length * 2)\n    For Each b As Byte In ba\n        hex.AppendFormat(&quot;{0:x2}&quot;, b)\n    Next\n    Return hex.ToString()\nEnd Function</code></pre>\n\n",
+    "PostedDate": "2013-07-29T22:09:53.057-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

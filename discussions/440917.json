@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1033053",
+    "ThreadId": "440917",
+    "Html": "HI\r<br />\n<br />\nI am using Managed Wifi API and I found this code cold give me the mac address. My question is, is it possible for me to find the IP address? And, How would I find the signal strength in DB?<br />\n<pre><code>WlanClient client = new WlanClient();\n        // Wlan = new WlanClient();\n        try\n        {\n            foreach (WlanClient.WlanInterface wlanIface in client.Interfaces)\n            {\n\n                Wlan.WlanBssEntry[] wlanBssEntries = wlanIface.GetNetworkBssList();\n\n                foreach (Wlan.WlanBssEntry network in wlanBssEntries)\n                {\n                    int rss = network.rssi;\n                    //     MessageBox.Show(rss.ToString());\n                    byte[] macAddr = network.dot11Bssid;\n\n                    string tMac = &quot;&quot;;\n\n                    for (int i = 0; i &lt; macAddr.Length; i++)\n                    {\n\n                        tMac += macAddr[i].ToString(&quot;x2&quot;).PadLeft(2, '0').ToUpper();\n\n                    }\n\n\n\n                    Console.WriteLine(&quot;Found network with SSID {0}.&quot;, System.Text.ASCIIEncoding.ASCII.GetString(network.dot11Ssid.SSID).ToString());\n\n                    Console.WriteLine(&quot;Signal: {0}%.&quot;, network.linkQuality);\n\n                    Console.WriteLine(&quot;BSS Type: {0}.&quot;, network.dot11BssType);\n\n                    Console.WriteLine(&quot;MAC: {0}.&quot;, tMac);\n\n                    Console.WriteLine(&quot;RSSID:{0}&quot;, rss.ToString());\n\n\n                }\n                Console.ReadLine();\n            }\n        }\n        catch (Exception ex)\n        {\n            MessageBox.Show(ex.Message);\n        }</code></pre>\n\n",
+    "PostedDate": "2013-04-19T07:23:06.273-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1034057",
+    "ThreadId": "440917",
+    "Html": "<strong>activex wrote:</strong><br />\n<blockquote>\nHI<br />\n<br />\nI am using Managed Wifi API and I found this code cold give me the mac address. My question is, is it possible for me to find the IP address? And, How would I find the signal strength in DB?<br />\n<pre><code>WlanClient client = new WlanClient();\n        // Wlan = new WlanClient();\n        try\n        {\n            foreach (WlanClient.WlanInterface wlanIface in client.Interfaces)\n            {\n\n                Wlan.WlanBssEntry[] wlanBssEntries = wlanIface.GetNetworkBssList();\n\n                foreach (Wlan.WlanBssEntry network in wlanBssEntries)\n                {\n                    int rss = network.rssi;\n                    //     MessageBox.Show(rss.ToString());\n                    byte[] macAddr = network.dot11Bssid;\n\n                    string tMac = &quot;&quot;;\n\n                    for (int i = 0; i &lt; macAddr.Length; i++)\n                    {\n\n                        tMac += macAddr[i].ToString(&quot;x2&quot;).PadLeft(2, '0').ToUpper();\n\n                    }\n\n\n\n                    Console.WriteLine(&quot;Found network with SSID {0}.&quot;, System.Text.ASCIIEncoding.ASCII.GetString(network.dot11Ssid.SSID).ToString());\n\n                    Console.WriteLine(&quot;Signal: {0}%.&quot;, network.linkQuality);\n\n                    Console.WriteLine(&quot;BSS Type: {0}.&quot;, network.dot11BssType);\n\n                    Console.WriteLine(&quot;MAC: {0}.&quot;, tMac);\n\n                    Console.WriteLine(&quot;RSSID:{0}&quot;, rss.ToString());\n\n\n                }\n                Console.ReadLine();\n            }\n        }\n        catch (Exception ex)\n        {\n            MessageBox.Show(ex.Message);\n        }</code></pre>\n\n</blockquote>\nfound it!<br />\n",
+    "PostedDate": "2013-04-22T10:06:00.26-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1063098",
+    "ThreadId": "440917",
+    "Html": "Hi activex,\r<br />\n<br />\n<br />\ncould you please specify how you were able to get the ipaddress of an AP ?\r<br />\n<br />\nSrinivas<br />\n",
+    "PostedDate": "2013-07-01T03:03:58.933-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1352688",
+    "ThreadId": "440917",
+    "Html": "Yes, please share your solution!<br />\n",
+    "PostedDate": "2015-02-14T15:07:47.503-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

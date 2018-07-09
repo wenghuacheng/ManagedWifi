@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "889538",
+    "ThreadId": "387913",
+    "Html": "\r\n<p>Hi there!</p>\r\n<p>I'm using the Managed Wifi API and I'm having some trouble. This is the situation: I took the example code and changed the profile that is created to fit my internet connection. It connects fine, but when I try to connect to a wifi connection at work, I\r\n am unable to use the API to establish a connection to the internet. The connectino at my house uses WEP, and the one at work uses WPA2PSK, so my question is if only WEP connections can be used.</p>\r\n<p>I'll leave the profile of the WPA2PSK network here so you can see it and tell me if there is a mistake.</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:blue\">string</span> profileName = <span style=\"color:#a31515\">&quot;mCAT&quot;</span>; <span style=\"color:green\">// this is also the SSID</span>\n<span style=\"color:blue\">string</span> mac = <span style=\"color:#a31515\">&quot;6D434154&quot;</span>;\n<span style=\"color:blue\">string</span> key = <span style=\"color:#a31515\">&quot;mediacat?11&quot;</span>;\n<span style=\"color:blue\">string</span> profileXml = <span style=\"color:blue\">string</span>.Format(<span style=\"color:#a31515\">&quot;&lt;?xml version=\\&quot;1.0\\&quot;?&gt;&lt;WLANProfile xmlns=\\&quot;http://www.microsoft.com/networking/WLAN/profile/v1\\&quot;&gt;&lt;name&gt;{0}&lt;/name&gt;&lt;SSIDConfig&gt;&lt;SSID&gt;&lt;hex&gt;{1}&lt;/hex&gt;&lt;name&gt;{0}&lt;/name&gt;&lt;/SSID&gt;&lt;/SSIDConfig&gt;&lt;connectionType&gt;ESS&lt;/connectionType&gt;&lt;MSM&gt;&lt;security&gt;&lt;authEncryption&gt;&lt;authentication&gt;WPA2PSK&lt;/authentication&gt;&lt;encryption&gt;AES&lt;/encryption&gt;&lt;useOneX&gt;false&lt;/useOneX&gt;&lt;/authEncryption&gt;&lt;sharedKey&gt;&lt;keyType&gt;networkKey&lt;/keyType&gt;&lt;protected&gt;false&lt;/protected&gt;&lt;keyMaterial&gt;{2}&lt;/keyMaterial&gt;&lt;/sharedKey&gt;&lt;keyIndex&gt;0&lt;/keyIndex&gt;&lt;/security&gt;&lt;/MSM&gt;&lt;/WLANProfile&gt;&quot;</span>, profileName, mac, key);\n</pre>\r\n</div>\r\n<p></p>\r\n<p>Thanks in advance!</p>\r\n",
+    "PostedDate": "2012-07-24T01:42:38.503-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "894073",
+    "ThreadId": "387913",
+    "Html": "<p>Hi,</p>\r\n<p>For WPA2PSK there is different profile.</p>\r\n<p>XML Profile changes depending on the type of Security and encryption. In below link u can find the types of profile depening on connection.</p>\r\n<p><a href=\"http://msdn.microsoft.com/en-us/library/windows/desktop/aa369853(v=vs.85).aspx\">http://msdn.microsoft.com/en-us/library/windows/desktop/aa369853(v=vs.85).aspx</a></p>\r\n<p>Thanks</p>",
+    "PostedDate": "2012-08-01T03:12:28.827-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

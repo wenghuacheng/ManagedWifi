@@ -1,0 +1,6 @@
+C:\Users\wenghuacheng\Desktop\managedwifi\sourceCode\sourceCode\bin\Debug\ManagedWifi.dll
+C:\Users\wenghuacheng\Desktop\managedwifi\sourceCode\sourceCode\bin\Debug\ManagedWifi.pdb
+C:\Users\wenghuacheng\Desktop\managedwifi\sourceCode\sourceCode\obj\Debug\ManagedWifi.csprojResolveAssemblyReference.cache
+C:\Users\wenghuacheng\Desktop\managedwifi\sourceCode\sourceCode\obj\Debug\ManagedWifi.csproj.CoreCompileInputs.cache
+C:\Users\wenghuacheng\Desktop\managedwifi\sourceCode\sourceCode\obj\Debug\ManagedWifi.dll
+C:\Users\wenghuacheng\Desktop\managedwifi\sourceCode\sourceCode\obj\Debug\ManagedWifi.pdb

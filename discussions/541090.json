@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1230012",
+    "ThreadId": "541090",
+    "Html": "How to get the SSID list?<br />\n<pre><code>using NativeWifi;\nusing System.Text;\nusing System;\nusing System.Collections.Generic;\nusing System.ComponentModel;\nusing System.Data;\nusing System.Drawing;\nusing System.Linq;\nusing System.Text;\nusing System.Threading.Tasks;\nusing System.Windows.Forms;\n\nnamespace WindowsFormsApplication4\n{\n    public partial class Form1 : Form\n    {\n        public Form1()\n        {\n            InitializeComponent();\n\n        }\n        static string GetStringForSSID(Wlan.Dot11Ssid ssid)\n        {\n            return Encoding.ASCII.GetString(ssid.SSID, 0, (int)ssid.SSIDLength);\n        }\n        private void Form1_Load(object sender, EventArgs e)\n        {\n            WlanClient client = new WlanClient();\n            label1.Text = (&quot;Initialized&quot;);\n            foreach (WlanClient.WlanInterface wlanIface in client.Interfaces)\n            {\n                label1.Text = (&quot;Iterfaces&quot;);\n                Wlan.WlanAvailableNetwork[] networks = wlanIface.GetAvailableNetworkList(0);\n                foreach (Wlan.WlanAvailableNetwork network in networks)\n                {\n                    label1.Text = (&quot;Found networks&quot;);\n                    if (network.dot11DefaultCipherAlgorithm == Wlan.Dot11CipherAlgorithm.WPA_UseGroup)\n                    {\n                        label1.Text = (&quot;Found WPA&quot;);\n                    } if (network.dot11DefaultCipherAlgorithm == Wlan.Dot11CipherAlgorithm.WEP)\n                    {\n                        String n=&quot;&quot;;\n                        n = network.dot11Ssid.SSID.ToString();\n                        listBox1.Items.Add(n);\n                        label1.Text = (&quot;Found WEP network with SSID&quot;);\n                    }\n                    \n                }\n            }\n            \n        }\n    }\n}\n</code></pre>\n\n",
+    "PostedDate": "2014-04-03T11:16:21.34-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

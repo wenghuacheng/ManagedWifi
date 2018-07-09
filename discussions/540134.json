@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1226639",
+    "ThreadId": "540134",
+    "Html": "I use Windows 7 Hosted Network to set up a SoftAP. Client phones connect to it. I'd like to obtain signal strength. But WLanClient.Interfaces does not include the Virtual WiFi Miniport Adapter - because WLanEnumInterfaces(), which it calls, doesn't. With WLanClient.Interfaces I can only obtain the underlying physical wifi adapter. But from that physical adapter I can not obtain signal strength because it is &quot;not in the correct state&quot; (the WlanQueryInterface() call returns an error to that effect; out on Network Connections the physical adapter shows Not connected while the virtual adapter is Connected).\r<br />\n<br />\nIs there any way to obtain information on the Virtual WiFi adapter(s) through Managed Wifi?\r<br />\n<br />\nDo you know a way to do what I need to do via another API?<br />\n",
+    "PostedDate": "2014-03-25T14:04:54.687-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

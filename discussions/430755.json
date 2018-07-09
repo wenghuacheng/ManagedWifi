@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "991640",
+    "ThreadId": "430755",
+    "Html": "\r\n<p>after I reboot unit, it is not connect automatically to hidden Wifi network, any idea? when I click on profile properties, check-box for &quot;Connect even if the network is not broadcasting its name (SSID)&quot;, how that check-box selects automatically with &quot;SetProfile()\r\n and Connect() commands?.</p>\r\n",
+    "PostedDate": "2013-01-24T09:14:11.223-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

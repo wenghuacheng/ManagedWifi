@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "141555",
+    "ThreadId": "42582",
+    "Html": "Are there any sources of Managed Wifi API for C++ available. <br>\r\nor what i have to do to can use that for .Net Visual C++<br>\r\n",
+    "PostedDate": "2008-12-18T04:21:52.78-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "160347",
+    "ThreadId": "42582",
+    "Html": "In theory you should be able to compile this code and add it as a reference/library in your C++ project.&nbsp; That is the theory with .Net hopefully it works easily for you.<br>\r\n",
+    "PostedDate": "2009-02-20T18:24:42.72-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "There is no synchronization for queueEvents.\nIt leads to problems because the check and the assignment are done in different threads.\n \nYou can set queueEvents to true but the event won't be called because it is not synchronized across the CPUs.\n \nPossibly lock statement should be added.\nIt should be checked good.",
+    "LastUpdatedDate": "2013-02-21T16:44:45.173-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2009-11-19T06:33:47.713-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "WlanClient.WlanInterface.queueEvents is not synchronized",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 14925
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

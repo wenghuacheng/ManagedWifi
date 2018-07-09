@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Please add same like Autoconf but with use of BackgroundScanEnabled.\n \nSince SetInterfaceInt/GetInterfaceInt are private , it is needed to make properties for all flags...",
+    "LastUpdatedDate": "2013-09-04T08:33:15.503-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2010-03-17T02:06:18.88-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "No BackgroundScan in WlanInterface",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 16817
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "You can add the following to WlanApi.cs\r\n\r\n\npublic bool BackgroundScanEnabled\n            {\n                get\n                {\n                    return GetInterfaceInt(Wlan.WlanIntfOpcode.BackgroundScanEnabled) != 0;\n                }\r\n\r\n                set\n                {\n                    SetInterfaceInt(Wlan.WlanIntfOpcode.BackgroundScanEnabled, value ? 1 : 0);\n                }\n            }\r\n\r\nAfter a successful connection I disable the background scanning.  Background scanning seems to enable itself after a disconnect.",
+      "PostedDate": "2013-09-04T08:33:15.503-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

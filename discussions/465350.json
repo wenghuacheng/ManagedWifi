@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1117454",
+    "ThreadId": "465350",
+    "Html": "When I get a list of available networks,  I can retrieve dot11DefaultAuthAlgorithm from WlanAvailableNetwork but I am having trouble determining which profile defined by Microsoft to use with Connect.\r<br />\n<br />\nFor example, one network I see shows dot11DefaultAuthAlgorithm=RSNA_PSK but I can't find a profile that even references such a thing.\r<br />\n<br />\nAm I interpreting something incorrectly or is there some &quot;translation&quot; I should use?\r<br />\n<br />\nRegards,\r<br />\nJim<br />\n",
+    "PostedDate": "2013-11-04T16:38:00.147-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

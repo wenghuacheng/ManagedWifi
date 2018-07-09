@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "219134",
+    "ThreadId": "64385",
+    "Html": "<p>How can we turn wifi radio on/off with native wifi or managed wifi?&nbsp;</p>\r\n<p>I have seen that it's simple when using VISTA, however, I want to do this on Windows XP.</p>\r\n<p>Can anyone tell me how can I manage to do it?&nbsp;</p>\r\n<p>I have tried many IOCTL OIDs... but ... can not...</p>\r\n<p>NOTE: this is to turn on/off the radio, only to make no signal sent out. &nbsp;but not disable/enable the network adapter. When we turn off the radio, the status of Wireless Network Connection in the Network Connections is still able without connection.</p>",
+    "PostedDate": "2009-08-04T01:17:14.033-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

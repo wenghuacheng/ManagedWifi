@@ -1,0 +1,36 @@
+[
+  {
+    "Id": "0",
+    "Name": "1.0",
+    "DevelopmentStatus": "None",
+    "Description": "This is the initial release of the Managed Wifi API. As such, it is production-quality and ready for use.",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2007-06-19T08:56:46.787-07:00",
+    "Files": [
+      {
+        "Id": "a761a979-29f0-4944-a309-5fa6d51383df",
+        "FileName": "managedwifi-1.0.zip",
+        "Url": "./0/a761a979-29f0-4944-a309-5fa6d51383df",
+        "Type": "Source Code",
+        "UploadDate": "2007-06-19T08:56:46.8-07:00"
+      }
+    ]
+  },
+  {
+    "Id": "1",
+    "Name": "1.1",
+    "DevelopmentStatus": "None",
+    "Description": "* Various cleanups and additions to the documentation.\n* Added DeleteProfile, GetNetworkBssList and WlanGetAvailableNetworkList methods. Now it's possible to scan for available networks.\n* Fixed an incorrect definition of WlanAssociationAttributes which caused WlanConnectionAttributes to be incorrectly parsed.",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2007-10-14T11:13:27.997-07:00",
+    "Files": [
+      {
+        "Id": "679779b2-c2b3-4ba9-8508-dc6e6f0d065d",
+        "FileName": "managedwifi-1.1.zip",
+        "Url": "./1/679779b2-c2b3-4ba9-8508-dc6e6f0d065d",
+        "Type": "Source Code",
+        "UploadDate": "2007-10-14T11:13:27.997-07:00"
+      }
+    ]
+  }
+]

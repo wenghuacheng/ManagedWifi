@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi,\nThanks for your project, I 've been looking for such a wrapper to WZC for a while.\nAnyway, I'm kind of new with .net and I don't really understand how to use your api.\nI need to scan for the available SSID (only the name ..) and get an array of these strings.\n \nhow can I do such a thing?\nI will be more then happy if you could give me an example ,\n \nRegards,\nDan.",
+    "LastUpdatedDate": "2013-02-21T16:44:45.97-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2007-12-30T00:05:04.41-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Example code, pls.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 9127
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

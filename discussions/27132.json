@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "90556",
+    "ThreadId": "27132",
+    "Html": "\r\nHi!<br /><br />I have tried to retrieve the exact RSSI values for each detected AP with two approaches:<br /><br />1. retrieving Wlan.WlanAvailableNetwork.wlanSignalQuality or  Wlan.WlanBssEntry.linkQuality and converting the percentage values into dBm based on http://msdn.microsoft.com/en-us/library/ms707403(VS.85).aspx. The results look OK but the problem is that they never go over -50. The values are also important to us if the signals are stronger than -50dBm...<br /><br />2. retrieving Wlan.WlanBssEntry.rssi. According to the documentation (http://msdn.microsoft.com/en-us/library/ms706839(VS.85).aspx) it looks very nice, exactly what we needed. But the values are too low to be realistic. For instance, the RSSI value of an AP placed a few meters away from my laptop is -139... My question is how I should interpret these values? I couldn't see any correlation...<br /><br />Could anyone help me? Thanks a lot in advance!<br />",
+    "PostedDate": "2008-05-05T08:26:22.46-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "91158",
+    "ThreadId": "27132",
+    "Html": "\r\nAfter consulting Microsoft, problem is now solved by using approach 2 and after updating the driver of the wireless adapter (under Vista). Mine is an Intel Pro Wireless 3945ABG.<br />",
+    "PostedDate": "2008-05-08T01:14:56.94-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "105946",
+    "ThreadId": "27132",
+    "Html": "<br>\r\n<div style=\"border-style:dotted none;border-color:rgb(170, 170, 170) -moz-use-text-color;border-width:0.1em medium;margin:1em 0em 2.5em 3em;padding:0.2em;font-style:italic\"><br>\r\nluren wrote:<br>\r\nAfter consulting Microsoft, problem is now solved by using approach 2 and after updating the driver of the wireless adapter (under Vista). Mine is an Intel Pro Wireless 3945ABG.<br>\r\n<br>\r\n<br>\r\n</div>\r\nhi luren,<br>\r\n<br>\r\ncan you give me a sample code to use Wlan.WlanBssEntry.rssi?<br>\r\n<br>\r\nthanks a lot before<br>\r\n",
+    "PostedDate": "2008-07-21T02:51:24.53-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

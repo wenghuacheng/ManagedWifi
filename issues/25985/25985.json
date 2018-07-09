@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When using ManagedWifi as a project within a VB.net solution, you will receive an ambigious error when you try to reference the public object NotificationCode in VB code. This is due to the declaration of these two items below and the fact that VB is case insensitive. To fix this easily, alter the definition of the object. \n\npublic int notificationCode;\npublic object NotificationCode\n\nExample code in VB that throws the error: \nSelect Case DirectCast(notifyData.notificationCode, Wlan.WlanNotificationCodeMsm)\n\nTo rectify the situation, I changed the definition in Interop.cs from public object NotificationCode to:\npublic object NotificationCodeObj\n\nOnce done I rebuilt the ManagedWifi solution and my code in VB became this:\nSelect Case DirectCast(notifyData.notificationCodeObj, Wlan.WlanNotificationCodeMsm)",
+    "LastUpdatedDate": "2015-10-12T03:00:38.66-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2015-02-14T08:46:20.913-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "vb.net Ambigious error for public object NotificationCode",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 25985
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

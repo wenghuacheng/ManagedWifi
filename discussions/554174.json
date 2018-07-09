@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1277782",
+    "ThreadId": "554174",
+    "Html": "When I try to open managedwifi example solution, I get the following error:<br />\nthe project you are trying to open was not created using visual studio Tools for Applications. Visual Studio Tools cannot open projects that were created using other applications. <br />\n<br />\nI have Visual Studio 2010 Express installed.<br />\nAny hint what may be wrong?<br />\nThanks!<br />\n",
+    "PostedDate": "2014-07-25T09:43:53.73-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

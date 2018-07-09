@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "475125",
+    "ThreadId": "222098",
+    "Html": "<p>Hi,</p>\r\n<p>I'm trying to use Managed WiFi API to rescan the networks. Keeping in mind that Scan() is asynchronous in its nature, I've started with copy/pasting the ConnectSynchronously() with all its event handling code and adjusting it appropriately.</p>\r\n<p>Scanning works perfectly, but unfortunately no events are ever detected, so the re-scan always ends with a timeout, even if it set as big as 20 sec.</p>\r\n<p>What may be missing? I refrain from posting a big piece of code here now, but can do it if necessary...</p>",
+    "PostedDate": "2010-07-31T23:25:49.557-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "841780",
+    "ThreadId": "357419",
+    "Html": "\r\n<p>Hi everybody.</p>\r\n<p>I have been using this API successfully and without any major problems. Until today at least...&nbsp;</p>\r\n<p>I have implemented a program in C# which among others retrieves the BSSID of the connected A.P. and the number of the available wireless networks in proximity and does a number of checks. When I am connected to a certain A.P. I get a message and when I am\r\n not connected to this specific A.P. (but to another one or I am not connected at all) I get another message. Simple as that.</p>\r\n<p>I did this, connection to the A.P, &nbsp;check once and only - when the application starts.</p>\r\n<p>But...I wanted to add a timer so that this check happens every 60 seconds (and not only at the beginning). The problem is that it runs once (or sometimes it doesn't even run once) and then the program freezes and I get the following message:</p>\r\n<p><em>Win32Exception was unhandled:</em></p>\r\n<p><em>An attempt was made to establish a session to a network server, but there are already too many sessions established to that server</em></p>\r\n<p>and the message box points to&nbsp;WlanClient client = new WlanClient();</p>\r\n<p>I don't know what is incorrect and although the code compiles correctly I get this error.&nbsp;</p>\r\n<p>Maybe is something with the dispose of the objects?</p>\r\n<p>Any help will be much appreciated.&nbsp;</p>\r\n",
+    "PostedDate": "2012-05-28T12:41:22.187-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "844766",
+    "ThreadId": "357419",
+    "Html": "\r\n<p>I think I managed to figured it out.</p>\r\n<p>Thank you anyway!</p>\r\n",
+    "PostedDate": "2012-06-04T19:05:10.127-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

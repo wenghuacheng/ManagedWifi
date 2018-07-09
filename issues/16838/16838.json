@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I was able to override and use this function in Windows XP 32-bit, Vista 32-bit, Vista 64-bit, and Windows 7 32-bit.  I cannot seem to get it to function in Windows 7 64-bit.  I am using PEAP MS-CHAPv2 User Properties standard from MSDN and only seem to run into the issue with Windows 7 64-bit.  Has anyone had a similar issue?",
+    "LastUpdatedDate": "2013-02-21T16:44:44.493-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2010-03-18T11:47:14.15-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "WlanSetProfileEapXmlUserData",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 16838
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

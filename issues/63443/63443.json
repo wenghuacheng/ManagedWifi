@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I have noticed that type 7&8 are missing .Is there a reason or a workaround for now to get information of PHY types like 802.11n and 802.11ac ?\n\ntypedef enum _DOT11_PHY_TYPE { \n  dot11_phy_type_unknown     = 0,\n  dot11_phy_type_any         = 0,\n  dot11_phy_type_fhss        = 1,\n  dot11_phy_type_dsss        = 2,\n  dot11_phy_type_irbaseband  = 3,\n  dot11_phy_type_ofdm        = 4,\n  dot11_phy_type_hrdsss      = 5,\n  dot11_phy_type_erp         = 6,\n __ dot11_phy_type_ht          = 7,\n  dot11_phy_type_vht         = 8,__\n  dot11_phy_type_IHV_start   = 0x80000000,\n  dot11_phy_type_IHV_end     = 0xffffffff\n} DOT11_PHY_TYPE, *PDOT11_PHY_TYPE;\n\n\nfrom \n\npublic enum Dot11PhyType : uint\n\t\t{\n\t\t\t/// <summary>\n\t\t\t/// Specifies an unknown or uninitialized PHY type.\n\t\t\t/// </summary>\n\t\t\tUnknown = 0,\n\t\t\t/// <summary>\n\t\t\t/// Specifies any PHY type.\n\t\t\t/// </summary>\n\t\t\tAny = Unknown,\n\t\t\t/// <summary>\n\t\t\t/// Specifies a frequency-hopping spread-spectrum (FHSS) PHY. Bluetooth devices can use FHSS or an adaptation of FHSS.\n\t\t\t/// </summary>\n\t\t\tFHSS = 1,\n\t\t\t/// <summary>\n\t\t\t/// Specifies a direct sequence spread spectrum (DSSS) PHY.\n\t\t\t/// </summary>\n\t\t\tDSSS = 2,\n\t\t\t/// <summary>\n\t\t\t/// Specifies an infrared (IR) baseband PHY.\n\t\t\t/// </summary>\n\t\t\tIrBaseband = 3,\n\t\t\t/// <summary>\n\t\t\t/// Specifies an orthogonal frequency division multiplexing (OFDM) PHY. 802.11a devices can use OFDM.\n\t\t\t/// </summary>\n\t\t\tOFDM = 4,\n\t\t\t/// <summary>\n\t\t\t/// Specifies a high-rate DSSS (HRDSSS) PHY.\n\t\t\t/// </summary>\n\t\t\tHRDSSS = 5,\n\t\t\t/// <summary>\n\t\t\t/// Specifies an extended rate PHY (ERP). 802.11g devices can use ERP.\n\t\t\t/// </summary>\n\t\t\tERP = 6,\n\t\t\t/// <summary>\n\t\t\t/// Specifies the start of the range that is used to define PHY types that are developed by an independent hardware vendor (IHV).\n\t\t\t/// </summary>\n\t\t\tIHV_Start = 0x80000000,\n\t\t\t/// <summary>\n\t\t\t/// Specifies the end of the range that is used to define PHY types that are developed by an independent hardware vendor (IHV).\n\t\t\t/// </summary>\n\t\t\tIHV_End = 0xffffffff\n\t\t}",
+    "LastUpdatedDate": "2015-05-18T00:58:09.293-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2015-05-18T00:58:09.293-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Missing PHY Types",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 63443
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

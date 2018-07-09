@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1066422",
+    "ThreadId": "449529",
+    "Html": "Hello out ther!\r<br />\n<br />\nI am using this great API, i use it to check wireless sticks.\r<br />\nFor that i needed my app to disconnect from network before the next stick can be tested.\r<br />\n<br />\nAnd i found a way to disconnect:\r<br />\n<br />\nWin7 includes an intuitive GUI that allowes you to take control of wlan networks:\r<br />\n(<a href=\"http://www.nextofwindows.com/how-to-manage-a-wireless-wifi-network-from-the-command-line-in-windows-7/\" rel=\"nofollow\">http://www.nextofwindows.com/how-to-manage-a-wireless-wifi-network-from-the-command-line-in-windows-7/</a>)\r<br />\n<br />\nI used the command to disconnect from my network:<br />\n<pre><code>            System.Diagnostics.Process process = new System.Diagnostics.Process();\n            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();\n            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;\n            startInfo.FileName = &quot;cmd.exe&quot;;\n            startInfo.Arguments = &quot;/C netsh wlan disconnect&quot;;\n            process.StartInfo = startInfo;\n            process.Start();</code></pre>\n\nMaybe someone can use it too.\r<br />\nRegards<br />\n",
+    "PostedDate": "2013-07-09T23:38:08.933-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1354792",
+    "ThreadId": "449529",
+    "Html": "This is the way to add a disconnect function to managedwifi: <a href=\"http://managedwifi.codeplex.com/discussions/34405\" rel=\"nofollow\">http://managedwifi.codeplex.com/discussions/34405</a><br />\n",
+    "PostedDate": "2015-02-22T19:28:45.013-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

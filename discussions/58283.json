@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "197093",
+    "ThreadId": "58283",
+    "Html": "<p>I've gotten the ManagedWiFi API to work with the standard Windows wireless network connection stuff.&nbsp; But I have a Dell laptop that has the Dell Wireless WLAN card utility running the wireless connection and when that's going, I get this error:</p>\r\n<p>System.ComponentModel.Win32Exception: The service has not been started<br>&nbsp;&nbsp; at NativeWifi.Wlan.ThrowIfError(Int32 win32ErrorCode)<br>&nbsp;&nbsp; at NativeWifi.WlanClient..ctor()<br>&nbsp;&nbsp; at LessNetworks.Scoop.ConnectionInfo.WapConnectionInfo.Update() in C:\\Development\\Scoop\\trunk\\Scoop\\ConnectionInfo\\WapConnectionInfo.cs:line 28</p>\r\n<p>This is dependent on using the WINDOWS wifi stuff and not any old wifi management utility, isn't it?&nbsp; Is there any way to get info about wireless connections regardless of what's managing that connection?&nbsp; Do I have to go through NDIS or something?</p>",
+    "PostedDate": "2009-06-02T21:51:12.687-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1484889",
+    "ThreadId": "658336",
+    "Html": "I noticed a comment in the code indicating that a buffer size of 1024 had been chosen arbitrarily since the documentation for WlanReasonCodeToString provides no indication of how to automatically size the buffer correctly. This got me curious, and I've just looked into the function's interface. I've come up with a methodology that can be used.\r<br />\n<br />\nBased on my experimentation, WlanReasonCodeToString writes characters to the provided buffer until either it runs out of characters, or there is only space for one more character in the buffer. It then writes a null terminator and returns. If the buffer was not large enough, it still returns successfuly, it simply returns a truncated message, and the last character in the buffer is a null terminator so that it is still a valid C-style string.\r<br />\n<br />\nBased on this, there is no way to automatically detect if the buffer is <em>exactly</em> the correct size; the results are indistinguishable from the buffer being too short. If the buffer is at least one character larger than necessary, though, there will be a null terminator character earlier than the last character of the buffer.\r<br />\n<br />\nTherefore, the code can loop if the buffer only contains a null terminator in the very last position, trying a larger buffer, and the loop exits when the buffer has a null terminator in an earlier position. This should ensure that the full string is always returned.<br />\n",
+    "PostedDate": "2016-09-28T10:30:06.863-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

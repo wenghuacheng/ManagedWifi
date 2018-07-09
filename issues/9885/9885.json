@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I' am use GetNetworkBssList return error.",
+    "LastUpdatedDate": "2013-02-21T16:44:45.797-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2008-04-03T08:32:55.53-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "how to use GetNetworkBssList function?",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 9885
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Minimum supported client: Windows Vista\r\nMinimum supported server: Windows Server 2008\r\n\r\nhttp://msdn.microsoft.com/en-us/library/ms706735(v=VS.85).aspx",
+      "PostedDate": "2010-11-30T14:33:33.27-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-08-22T03:11:29.13-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:44:45.797-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

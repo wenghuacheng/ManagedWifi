@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Seems that people are missing examples of using this class.",
+    "LastUpdatedDate": "2017-12-06T17:50:05.35-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2007-07-06T09:40:05.45-07:00",
+    "Status": {
+      "Name": "Active",
+      "Id": 2
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Add code examples",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 7,
+    "Id": 2509
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I would love to see a simple C# sample.",
+      "PostedDate": "2007-09-05T05:19:17.56-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2007-11-05T07:00:27.167-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-01-05T23:12:10.16-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-12-04T08:25:29.6-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:44:47.103-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-06T17:50:05.35-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

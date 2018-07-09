@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "478361",
+    "ThreadId": "223001",
+    "Html": "<p>Hi Guys!</p>\r\n<p>&nbsp;</p>\r\n<p>I've been using this ManagedWifi API for atleast a couple of weeks ago and so far I've managed to cope up with some code functionalities. But not until I found this problem. Whenever the machine connects to a new router (with a WEP key) for the first time this error just appeared <strong><em>&quot;Element not found&quot; </em></strong>, but if you're gonna use the Windows' Wireless Network Connection of course it was able to connect and later I disconnected it. So I tried to run again the application that uses this ManagedWifi API and that's the time it works.</p>\r\n<p>There is no problem with the application as long as the machine had previously connected with the router, However , the main concern here is that when the application/computer/windows connects FOR THE FIRST TIME TO A NEW ROUTER that's the time the error raises.</p>\r\n<p>I guessed that it has something to do with window network passport, but&nbsp;I hope there's another solution for this without doing it manually.</p>",
+    "PostedDate": "2010-08-09T19:00:59.393-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

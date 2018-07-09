@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "422074",
+    "ThreadId": "206863",
+    "Html": "<p>Hi all,</p>\r\n<p>I would like to know if the ManagedWifi API offers the capability to turn the Wifi card into deep sleep or low power mode. I've looked at the API and couldn't find this feature. The driver documentation of the Wifi card does state that it is possible to do this with their own device IO control calls but this track seems a bit more complicated to do. I was wondering if there was a way to do it with the managed API.</p>\r\n<p>Thanks,</p>\r\n<p>Louis-Philippe</p>",
+    "PostedDate": "2010-03-22T05:17:34.047-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "731801",
+    "ThreadId": "206863",
+    "Html": "<p>Any answer here? I'm looking into power settings also. Thank you..</p>",
+    "PostedDate": "2012-01-27T12:27:32.197-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

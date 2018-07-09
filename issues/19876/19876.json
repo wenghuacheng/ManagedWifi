@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "how to setprofile in the wireless connection.\ni am using c# on  windows7.how can i create the profile ..plz help me",
+    "LastUpdatedDate": "2013-02-21T16:44:44.287-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2011-02-02T01:33:56.84-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "setprofile",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 19876
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "i got it .thanks",
+      "PostedDate": "2011-02-02T10:08:12.24-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:44:44.287-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi all\n\nI have created a windows application which identifies nearby wifi connections.For accessing wifi networks i am using managed wifi project.But my issue is \n\n var networkList = wifiConnection.GetAvailableNetworkList(0); iam calling this function to get the n/w list and getting only n/ws with frequencies within 2.4 ghz.Actually there are n/ws with frequencies above 5 ghz.Is there anything need to be added to get the accurate list.\n\n /// <summary>\n            /// Retrieves the list of available networks.\n            /// </summary>\n            /// <param name=\"flags\">Controls the type of networks returned.</param>\n            /// <returns>A list of the available networks.</returns>\n            public Wlan.WlanAvailableNetwork[] GetAvailableNetworkList(Wlan.WlanGetAvailableNetworkFlags flags)\n            {\n                IntPtr availNetListPtr;\n                Wlan.ThrowIfError(\n                    Wlan.WlanGetAvailableNetworkList(client.clientHandle, info.interfaceGuid, flags, IntPtr.Zero, out availNetListPtr));\n                try\n                {\n                    return ConvertAvailableNetworkListPtr(availNetListPtr);\n                }\n                finally\n                {\n                    Wlan.WlanFreeMemory(availNetListPtr);\n                }\n            }",
+    "LastUpdatedDate": "2016-07-08T23:13:21.083-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2016-07-08T23:13:21.083-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Network List not showing correctly",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 65187
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

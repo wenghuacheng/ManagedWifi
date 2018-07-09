@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1068876",
+    "ThreadId": "450143",
+    "Html": "Hello,\r<br />\n<br />\nI'm trying to get the current profile name from the interface, but when i do i get this Win32Exception:\r<br />\n<br />\n<strong>The group or resource is not in the correct state to perform the requested operation</strong>\r<br />\n<br />\nThis is the code i use.<br />\n<pre><code>Wlan.WlanConnectionAttributes attr = this.wlanInterface. &lt;-- this is an WlanClient.WlanInterface object\nstring profile = attr.profileName;</code></pre>\n\nI run this code in the WlanNotification event of the interface to see if the current connection matches the connection name in the object.\r<br />\n<br />\n<br />\nCan i run a code like this in an event? Can an example be shown?<br />\n",
+    "PostedDate": "2013-07-16T01:23:18.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1087247",
+    "ThreadId": "450143",
+    "Html": "&quot;The group or resource is not in the correct state to perform the requested operation &quot;\r<br />\n<br />\nSimply Toggle the Wifi Switch On and off to correct this problem. If you are sharing an Internet connection, make sure that its properly configured.<br />\n",
+    "PostedDate": "2013-09-02T00:52:51.947-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1087585",
+    "ThreadId": "450143",
+    "Html": "Dim wlanIface As WlanClient.WlanInterface = client.Interfaces(0)\r<br />\n<br />\nTextBox1.Text = wlanIface.CurrentConnection.profileName.ToString()<br />\n",
+    "PostedDate": "2013-09-03T01:51:36.733-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "850688",
+    "ThreadId": "360084",
+    "Html": "\r\n<p>Hi all,</p>\r\n<p>I am posting because I am struggling to get Managedwifi to work in a C# windows service.</p>\r\n<p>All I did is adding the ManagedWifi reference in my project. However, whenever I call a managedwifi function my service crashes.. I guess I need to make some config to get the whole work but have no idea.</p>\r\n<p>Does someone have any tips ?&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks,</p>\r\n<p>Cheers</p>\r\n",
+    "PostedDate": "2012-06-18T22:45:14.017-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

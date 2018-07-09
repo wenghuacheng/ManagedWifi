@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi,\n\nthere is a little Bug in the WlanRateSet Structure.\nAccording to the MSDN Site ( http://msdn.microsoft.com/en-us/library/windows/desktop/aa370026(v=vs.85).aspx ) the member 'uRateSetLength' is the number of bytes of the Array.\nUnfortunately this is a bug in the MSDN Documentation and in fact it is the number of Elements in the Array.\nThis bug was also implemented into the Wrapper.\ngetter function of \"public ushort[] Rates\" (Interop.cs; Line 777)\n\nBugfix:\n```\n\t\t\tpublic ushort[] Rates\n\t\t\t{\n\t\t\t\tget\n\t\t\t\t{\n\t\t\t\t\tushort[] rates = new ushort[rateSetLength];\n\t\t\t\t\tArray.Copy(rateSet, rates, rates.Length);\n\t\t\t\t\treturn rates;\n\t\t\t\t}\n\t\t\t}\n```\n\nI also posted this Documentation bug on the MSDN Forums:\nhttp://social.msdn.microsoft.com/Forums/en-US/0da4b443-e999-42c0-beaa-39986c250533/wlanrateset-structure?forum=windowssdk\n\nBest regards,\nAndreas",
+    "LastUpdatedDate": "2013-12-20T10:28:16.37-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2013-12-20T10:28:16.37-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "WlanRateSet Structure",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 25024
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

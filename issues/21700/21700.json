@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "ConnectSynchronously returns true when it receives a ConnectionComplete event because it ignores the ConnectionAttemptFail event, for example when an incorrect wireless key is entered. If a ConnectionAttemptFail is received, ConnectSynchronously should return false.",
+    "LastUpdatedDate": "2014-02-12T10:54:05.467-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2011-10-31T09:35:27.403-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "ConnectSyncronously returns true on failure",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 21700
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Exactly",
+      "PostedDate": "2012-07-05T12:16:04.807-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:44:43.69-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-02-12T10:53:10.48-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I do agree, it's an important issue.",
+      "PostedDate": "2014-02-12T10:54:05.467-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

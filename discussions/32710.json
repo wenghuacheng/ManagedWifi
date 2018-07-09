@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "108457",
+    "ThreadId": "32710",
+    "Html": "can u please help to get the singal strength of a wireless network??<br>\r\nplease try to reply soon.. i need it urgent<br>\r\nthanks<br>\r\n",
+    "PostedDate": "2008-08-01T02:04:06.963-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "160345",
+    "ThreadId": "32710",
+    "Html": "Probably way too late, but here is how I did it:<br>\r\n<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WlanClient client = new WlanClient();<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; foreach (WlanClient.WlanInterface wlanIface in client.Interfaces)<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //Add the event to track when the wireless connection changes<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wlanIface.WlanConnectionNotification += new WlanClient.WlanInterface.WlanConnectionNotificationEventHandler(wlanIface_WlanConnectionNotification);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //This is all to output some cool info about the connection<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Wlan.WlanAvailableNetwork[] networks = wlanIface.GetAvailableNetworkList(0);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Wlan.WlanConnectionAttributes current = wlanIface.CurrentConnection;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Wlan.WlanAvailableNetwork currentMore = networks.Where(n =&gt; n.profileName == current.profileName).Single();<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(&quot;Currently {1} to {0} with a signal quality of {2}.&quot;,current.profileName,current.isState,currentMore.wlanSignalQuality);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>\r\n<br>\r\nI built this off the sample code included with the project.<br>\r\n",
+    "PostedDate": "2009-02-20T18:08:51.297-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "835690",
+    "ThreadId": "32710",
+    "Html": "<div style=\"background-color: white; color: black;\"><span style=\"color: #000000;\">Hello! I'm trying to get signal quality from&nbsp;<span style=\"color: #008080;\">WlanNotification </span>event:</span></div>\n<div style=\"background-color: white; color: black;\"><span style=\"color: #000000;\">\n<div style=\"background-color: white; color: black;\">\n<pre><span style=\"color: blue;\">void</span> wi_WlanNotification(NativeWifi.Wlan.WlanNotificationData notifyData) \r\n{\r\n    <span style=\"color: blue;\">int</span> SignalQuality;\r\n    <span style=\"color: blue;\">if</span> (notifyData.notificationCode == (<span style=\"color: blue;\">int</span>)NativeWifi.Wlan.WlanNotificationCodeMsm.SignalQualityChange)\r\n    SignalQuality = Marshal.ReadInt32(notifyData.dataPtr); \r\n}\r\n</pre>\n</div>\n</span></div>\n<div style=\"background-color: white; color: black;\"><span style=\"color: #000000;\">But i'm getting strange values into SignalQuality variable: </span></div>\n<div style=\"background-color: white; color: black;\">\n<pre>62, 238, 226, 202, ... 65535 sometimes.</pre>\n</div>\n<div style=\"background-color: white; color: black;\">What can be wrong? Thank you.</div>",
+    "PostedDate": "2012-05-13T02:55:05.737-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

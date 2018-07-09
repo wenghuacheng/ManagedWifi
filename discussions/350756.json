@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "818213",
+    "ThreadId": "350756",
+    "Html": "\r\n<p>Hi, i want to connect to an AP which i found in my area.<br>\r\nI saw the sample code, and i watch that used the mac address.</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:blue\">string</span> profileName = <span style=\"color:#a31515\">&quot;Cheesecake&quot;</span>; <span style=\"color:green\">// this is also the SSID</span>\r\n<span style=\"color:blue\">string</span> mac = <span style=\"color:#a31515\">&quot;52544131303235572D454137443638&quot;</span>;\r\n<span style=\"color:blue\">string</span> key = <span style=\"color:#a31515\">&quot;hello&quot;</span>;\r\n<span style=\"color:blue\">string</span> profileXml = <span style=\"color:blue\">string</span>.Format(<span style=\"color:#a31515\">&quot;&lt;?xml version=\\&quot;1.0\\&quot;?&gt;&lt;WLANProfile xmlns=\\&quot;http://www.microsoft.com/networking/WLAN/profile/v1\\&quot;&gt;&lt;name&gt;{0}&lt;/name&gt;&lt;SSIDConfig&gt;&lt;SSID&gt;&lt;hex&gt;{1}&lt;/hex&gt;&lt;name&gt;{0}&lt;/name&gt;&lt;/SSID&gt;&lt;/SSIDConfig&gt;&lt;connectionType&gt;ESS&lt;/connectionType&gt;&lt;MSM&gt;&lt;security&gt;&lt;authEncryption&gt;&lt;authentication&gt;open&lt;/authentication&gt;&lt;encryption&gt;WEP&lt;/encryption&gt;&lt;useOneX&gt;false&lt;/useOneX&gt;&lt;/authEncryption&gt;&lt;sharedKey&gt;&lt;keyType&gt;networkKey&lt;/keyType&gt;&lt;protected&gt;false&lt;/protected&gt;&lt;keyMaterial&gt;{2}&lt;/keyMaterial&gt;&lt;/sharedKey&gt;&lt;keyIndex&gt;0&lt;/keyIndex&gt;&lt;/security&gt;&lt;/MSM&gt;&lt;/WLANProfile&gt;&quot;</span>, profileName, mac, key);\r\nwlanIface.SetProfile( Wlan.WlanProfileFlags.AllUser, profileXml, <span style=\"color:blue\">true</span> );\r\nwlanIface.Connect( Wlan.WlanConnectionMode.Profile, Wlan.Dot11BssType.Any, profileName );</pre>\r\n<pre><br></pre>\r\n</div>\r\n<p></p>\r\n<p>If i don't know the mac address of the AP, is any way to take this programmatically with c#?</p>\r\n<p>Thanks!!</p>\r\n",
+    "PostedDate": "2012-03-31T13:32:19.54-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

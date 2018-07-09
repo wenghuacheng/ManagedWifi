@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "218958",
+    "ThreadId": "64349",
+    "Html": "<p>Hello all,</p>\r\n<p>First, thanks for this great API, I had a wild idea and this made it much easier since i didnt neet to handle creating a wireless manager. However... after sending the command to connect to the wireless access point, the interface state does not seem to be updating all the way to Connected. Using the following code in a timed loop to monitor it, i've noticed the interface state always shows as &quot;Authenticating.&quot;</p>\r\n<p>It could be something silly that i have missed, any help would be appreciated! Thanks!</p>\r\n<p>The function below is always returning false, even after successful connections are established.</p>\r\n<p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre>        <span style=\"color:Blue\">public</span> <span style=\"color:Blue\">bool</span> wirelessConnectedToProfile(<span style=\"color:Blue\">string</span> profileName)\r\n        {\r\n            WlanClient client = <span style=\"color:Blue\">new</span> WlanClient();\r\n            <span style=\"color:Blue\">foreach</span> (WlanClient.WlanInterface wlanIface <span style=\"color:Blue\">in</span> client.Interfaces)\r\n            {\r\n                Console.WriteLine(<span style=\"color:#A31515\">&quot;WlanInterfaceState: &quot;</span> + wlanIface.InterfaceState.ToString());\r\n                <span style=\"color:Blue\">if</span> (wlanIface.InterfaceState == Wlan.WlanInterfaceState.Connected)\r\n                {\r\n                    <span style=\"color:Blue\">if</span> (wlanIface.CurrentConnection.profileName == profileName)\r\n                    {\r\n                        <span style=\"color:Blue\">return</span> <span style=\"color:Blue\">true</span>;\r\n                    }\r\n                }\r\n            }\r\n            <span style=\"color:Blue\">return</span> <span style=\"color:Blue\">false</span>;\r\n        }\r\n</pre>\r\n</div>\r\n</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-08-03T14:27:23.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "947277",
+    "ThreadId": "64349",
+    "Html": "\r\n<p>may be try this</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:blue\">try</span>\r\n{\r\n\tWlanClient client = <span style=\"color:blue\">new</span> WlanClient();\r\n\t<span style=\"color:blue\">foreach</span> (WlanClient.WlanInterface wlanIface <span style=\"color:blue\">in</span> client.Interfaces)\r\n\t{\r\n\t\t<span style=\"color:green\">// Lists all networks with WEP security</span>\r\n\t\tWlan.WlanAvailableNetwork[] networks = wlanIface.GetAvailableNetworkList(0);\r\n\t\t<span style=\"color:blue\">foreach</span> (Wlan.WlanAvailableNetwork network <span style=\"color:blue\">in</span> networks)\r\n\t\t{\r\n\t\t\t<span style=\"color:blue\">if</span> ((network.flags & Wlan.WlanAvailableNetworkFlags.Connected) == Wlan.WlanAvailableNetworkFlags.Connected){\r\n\t\t\t<span style=\"white-space:pre\">\t</span>CurrentlyConnectedNetwork = GetStringForSSID(network.dot11Ssid);\r\n\t\t\t\tIsConnected = <span style=\"color:blue\">true</span>;\r\n\t\t\t}\r\n\t\t}\r\n\t\t\t\t\r\n\t}\r\n\r\n}\r\n\r\n<span style=\"color:blue\">catch</span> (Exception ex)\r\n{\r\n\r\n}\r\n</pre>\r\n</div>\r\n<p></p>\r\n",
+    "PostedDate": "2012-11-26T13:44:11.387-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "63056",
+    "ThreadId": "19172",
+    "Html": "\r\nHello,<br /><br />How can I tell if the incorrect password is entered for an available network?  When I add a profile with an incorrect password, it returns Success (see code snippet below), and then it continually tries to connect to the network (unsuccessfully of course), but the status in the WlanAvailableNetworkFlags is set to connected... how can i detect an incorrect password?  None of the WlanInterface events (WlanNotification, WlanConnectionNotification, WlanReasonNotification) that fire seem to tell any relevant info about this... ?<br /><br />                Wlan.WlanReasonCode wlanReasonCode = SelectedWlanInterface.SetProfile(Wlan.WlanProfileFlags.AllUser, profileXml, true);<br />                if (wlanReasonCode != Wlan.WlanReasonCode.Success)<br />                {<br />                    throw new WirelessException(\"Unsuccessful result from adding profile {0}: {1}\", networkName, wlanReasonCode);<br />                }<br /><br />Any ideas? Thanks.<br /><br />Dan<br />",
+    "PostedDate": "2007-12-14T10:29:06.213-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "83508",
+    "ThreadId": "19172",
+    "Html": "\r\nI doesn't seem to me like the API provides any orderly way of knowing about an incorrect key, probably because the underlying 802.11 protocol provides no such notification either. The \"password\" is called a key: if you choose the right key, your packets are accepted by the AP - otherwise, they're dropped. Similarly, if you choose the right key, you could decrypt the packets. Otherwise, you have no way of even knowing who those encrypted packets belong to.<br /><br />I'm not saying this from being familiar with the protocol, but just from extrapolation on the way it behaves (e.g. you enter a wrong key in the GUI tools and you're not notified about it -- you simply have 0 received packets).<br />",
+    "PostedDate": "2008-03-28T07:07:36.213-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "88816",
+    "ThreadId": "19172",
+    "Html": "\r\nHi, thanks for the post, but I figured out a workaround, by checking the IP address of the network, if it was empty, then it was connecting, then if it can't connect it.  Here is a code snippet...<br />using System.Net;<br />using System.Net.NetworkInformation;<br /><br />            WlanClient.WlanInterface wlanInterface = &lt;get from somewhere&gt;;<br /><br />              // get all network interfaces on computer<br />                    NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();<br />                    string ipAddresses = String.Empty;<br /><br />                    // go through each network interface and find the one that matches this wireless interface<br />                    foreach (NetworkInterface adapter in nics)<br />                    {<br />                        if (String.Compare(adapter.Name, wlanInterface.InterfaceName, StringComparison.OrdinalIgnoreCase) == 0)<br />                        {<br />                             // go through all IPs addresses in this nic...<br />                            foreach (UnicastIPAddressInformation unicastIPAddress in adapter.GetIPProperties().UnicastAddresses)<br />                            {<br />                                string ipAddress = unicastIPAddress.Address.ToString();<br />                                // there are several non-identifiable ip addresses in adapter.GetIPProperties().DnsAddresses,<br />                                // so need to make a regex to get a real IP Address<br />                                if (System.Text.RegularExpressions.Regex.Match(ipAddress, @\"(\\d{1,3}\\.){3}\\d{1,3}\").Success)<br />                                {<br />                                    if (!String.IsNullOrEmpty(ipAddresses))<br />                                        ipAddresses += \", \";<br />                                    ipAddresses += ipAddress;<br />                                }<br />                            }<br />                        }<br />                    }<br />                    if (String.IsNullOrEmpty(ipAddresses))<br />                        ipAddresses = \"Acquiring IP Address\";<br /><br /><br /><br />",
+    "PostedDate": "2008-04-24T10:52:31.02-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

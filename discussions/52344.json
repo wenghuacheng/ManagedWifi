@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "175868",
+    "ThreadId": "52344",
+    "Html": "Hello guys, <br>\r\n<br>\r\nI need help to get client list of all computers that are connected on each AP.<br>\r\nAny ideas?<br>\r\n<br>\r\nCheers, <br>\r\n<br>\r\nMichel Trettim\r\n",
+    "PostedDate": "2009-04-05T12:10:04.45-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "477684",
+    "ThreadId": "52344",
+    "Html": "<p>In general. What you want to do, is to connect to a given network (I don't believe sorting by AP is possible at this stage), and then iterate the subnet - all computers available (Addresses). Then find the ones that reply to ping - and you have a basic list....</p>\r\n<p>It isn't possible to dump a list of connecteds. Unless your the network admin (have access to either the RADIUS server, or the router), and that this has a list of connected computers, that you can retrieve.</p>",
+    "PostedDate": "2010-08-07T16:55:57.727-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

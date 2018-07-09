@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "921124",
+    "ThreadId": "397849",
+    "Html": "\r\n<p>Hi everyone,</p>\r\n<p>I'm very new in C. I created an empty project and paste this example code in (is this correct?). I've encounter error while I try to compile the example project.&nbsp;</p>\r\n<p>&quot;Error<span> </span>1<span> </span>The type or namespace name 'NativeWifi' could not be found (are you missing a using directive or an assembly reference?)&quot;</p>\r\n<p>May I know what directive or assembly reference should I add in?</p>\r\n",
+    "PostedDate": "2012-10-03T02:22:29.63-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

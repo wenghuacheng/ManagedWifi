@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "205429",
+    "ThreadId": "60646",
+    "Html": "<p>Hello,</p>\r\n<p>This is pretty cool library. I am planning to use this in our application to allow users to browse wireless networks, and allow them to connect to a secured wireless network (WEP, WPA or WPA2).</p>\r\n<p>The question I have is, how do I convert the user entered passphrase to a 64 hex digits in case of WPA?</p>\r\n<p>Are there any built-in .Net types/methods available to achieve this?</p>\r\n<p>Any help/suggestions grealy appreciated</p>\r\n<p>Thanks</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-06-25T06:54:47.31-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "436945",
+    "ThreadId": "210963",
+    "Html": "<p>Hi All,</p>\r\n<p>I am trying to connect with SSID without using PROFILE, everytime i try to connect i get this error &quot; The parameter is incorrect &quot;.</p>\r\n<p>Code for connection:</p>\r\n<p><span style=\"font-size:x-small\"><span style=\"font-size:x-small\">mobjWLanClient.Interfaces[</span><span style=\"color:#2b91af;font-size:x-small\"><span style=\"color:#2b91af;font-size:x-small\">Convert</span></span><span style=\"font-size:x-small\">.ToInt32(cboNetworkNames.SelectedValue)].Connect(</span><span style=\"color:#2b91af;font-size:x-small\"><span style=\"color:#2b91af;font-size:x-small\">Wlan</span></span><span style=\"font-size:x-small\">.</span><span style=\"color:#2b91af;font-size:x-small\"><span style=\"color:#2b91af;font-size:x-small\">WlanConnectionMode</span></span><span style=\"font-size:x-small\">.Auto,<br></span></span><span style=\"font-size:x-small\"><span style=\"color:#2b91af;font-size:x-small\"><span style=\"color:#2b91af;font-size:x-small\">Wlan</span></span><span style=\"font-size:x-small\">.</span><span style=\"color:#2b91af;font-size:x-small\"><span style=\"color:#2b91af;font-size:x-small\">Dot11BssType</span></span><span style=\"font-size:x-small\">.Any, arrAvailableNetworks[</span><span style=\"color:#2b91af;font-size:x-small\"><span style=\"color:#2b91af;font-size:x-small\">Convert</span></span><span style=\"font-size:x-small\">.ToInt32(cboAvailableNetworks.SelectedValue)].dot11Ssid</span></span><span style=\"font-size:x-small\"><span style=\"font-size:x-small\">, </span><span style=\"color:#2b91af;font-size:x-small\"><span style=\"color:#2b91af;font-size:x-small\">Wlan</span></span><span style=\"font-size:x-small\">.</span><span style=\"color:#2b91af;font-size:x-small\"><span style=\"color:#2b91af;font-size:x-small\">WlanConnectionFlags</span></span><span style=\"font-size:x-small\">.AdhocJoinOnly);</span></span></p>\r\n<p><span style=\"font-size:x-small\"><span style=\"font-size:x-small\">The network BSS type is infrastructure. What is the best way to connect with the WLAN ?</span></span></p>\r\n<p><span style=\"font-size:x-small\"><span style=\"font-size:x-small\">Looking forward for your replies.</span></span></p>\r\n<p><span style=\"font-size:x-small\"><span style=\"font-size:x-small\">Regards,<br></span></span><span style=\"font-size:x-small\"><span style=\"font-size:x-small\">Usman Javed</span></span></p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-04-29T00:57:05.403-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1485616",
+    "ThreadId": "210963",
+    "Html": "I am having same problem with code from this repository. I tried NuGet package and it seems to work. Not sure what the difference is. Hopefully, the packaged fixed the issue. I hope Microsoft can provide more samples for various scenarios when they see so many people asking questions here without any response.<br />\n",
+    "PostedDate": "2016-10-08T14:31:20.363-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

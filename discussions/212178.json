@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "441163",
+    "ThreadId": "212178",
+    "Html": "<p>Hi,</p>\r\n<p>&nbsp;</p>\r\n<p>I am using DPAPI to decrypt wlan keyMaterial retrieved from WlanGetProfile ..</p>\r\n<p>The error code returned from&nbsp; CryptUnEncryptData is &quot;Unable to use password... &quot; (3215).</p>\r\n<p>&nbsp;</p>\r\n<p>Does anybody experiemented using CryptUnCryptData for profiles retrieved from Proifile store which are created from native UI.</p>\r\n<p>&nbsp;</p>\r\n<p>Regards,</p>\r\n<p>AD</p>",
+    "PostedDate": "2010-05-10T11:19:02.33-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "657942",
+    "ThreadId": "212178",
+    "Html": "<p>Hey,</p>\r\n<p>&nbsp;</p>\r\n<p>I have this problem too.. Have you got any answer?</p>",
+    "PostedDate": "2011-08-14T01:57:16.567-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

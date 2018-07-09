@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "266932",
+    "ThreadId": "78050",
+    "Html": "<p>Hi there,</p>\r\n<p>Sometimes, I accomplish to get connected to the wifi, but if, for example, I miss the password, I get connected anyway, but with windows warning me with a message: &quot;limited or no connectivity&quot;.</p>\r\n<p>&iquest;Is there any option in this API to catch this situation programmatically?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2009-12-14T01:47:43.597-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "436934",
+    "ThreadId": "78050",
+    "Html": "<p>Hello,</p>\r\n<p>i am too late to reply this, i just joined now, for those who will face this issue can be fixed by giving the IP, if you set obtain automatically IP in network card settings if DCHP server is not active than it can't obtain IP.</p>\r\n<p>Regards,</p>\r\n<p>Usman Javed</p>",
+    "PostedDate": "2010-04-29T00:44:04.583-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "560629",
+    "ThreadId": "78050",
+    "Html": "\r\n<p>Hi Jbosch and Usman</p>\r\n<p>I am here for the same reason i.e. catch the &quot;Limited Access..&quot; message&nbsp;programmatically&nbsp;, any solutions found please share</p>\r\n<p>thanks</p>\r\n",
+    "PostedDate": "2011-02-04T01:39:59.513-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

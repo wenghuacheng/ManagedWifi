@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "493524",
+    "ThreadId": "227218",
+    "Html": "<p>when setting up the xml profile using the library, the mac parameter is the mac address of router, right? It has 22 hex digits. How to get the mac address of router before connection is set up? thanks!</p>",
+    "PostedDate": "2010-09-14T14:18:01.717-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "493533",
+    "ThreadId": "227218",
+    "Html": "<p>i figured out finally. The mac parameter in the sample file should be the hex string of SSID. It works now.</p>",
+    "PostedDate": "2010-09-14T14:38:07.707-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

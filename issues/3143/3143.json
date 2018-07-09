@@ -1,0 +1,80 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Implement scanning for available networks.\n \nSupport snippet:\n---\nYes, that's true - GetProfiles is not the right way to go. You should use WlanClient's Scan method. The clumsy thing about Scan is that it's asynchronous: it returns immediately, and then you should get an event (you can subscribe to one of WlanClient's events, not sure which...) and only once you get the ScanComplete notification code, only then you can call WlanGetAvailableNetworkList...\n \n- but guess what, I didn't include this method yet. So maybe it isn't ready for version 1.0 yet ...\n \nI'll try to cover this basic feature (scanning) ASAP.",
+    "LastUpdatedDate": "2013-02-21T16:44:46.56-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2007-07-17T09:43:11.037-07:00",
+    "Status": {
+      "Name": "Active",
+      "Id": 2
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Implement scanning for available networks",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 6,
+    "Id": 3143
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I am also looking for example code in c# that implements the scanning of AP's MAC address and RSSI. Would it be possible with the API that you have provided and if so can you give an example code. I shall be very thankful.",
+      "PostedDate": "2007-07-24T10:43:21.08-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2007-08-22T00:46:08.1-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "The managed API for this is already in the source code (not released yet but you can get it).\r\nUnfortunately the ScanComplete notification is not available on Windows XP SP2, so I cannot implement a ScanSynchronously method for now. However, most times, GetAvailableNetworkList on the WlanInterface would work just fine.",
+      "PostedDate": "2007-10-14T10:44:52.393-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2007-10-14T10:44:52.753-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2007-10-22T03:40:25.04-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "First of all i want to thank you for such a useful job. Like raja286, i am trying to find the MAC address of the available AP's. Is it possible in released version? Or does windows API give opportunity to reach this info? Can you help me? \r\n\r\nThanks",
+      "PostedDate": "2008-01-30T03:35:20.263-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-01-30T03:35:33.547-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:44:46.56-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1116876",
+    "ThreadId": "465200",
+    "Html": "When I use wlanIface.GetAvailableNetworkList(0), it get a duplicate of the connected network but the Windows (7 and 8) list of available networks only shows the connected network and the other available network.\r<br />\n<br />\nwlanIface.GetAvailableNetworkList(0)<br />\n<pre><code>Name                 Auth             Signal   Flags                    Security         BSSType          Connectable \nlinksys              RSNA_PSK         62       Connected, HasProfile    True             Infrastructure   True           \nlinksys              RSNA_PSK         72       0                        True             Infrastructure   True           \nlinksys-guest        IEEE80211_Open   60       0                        False            Infrastructure   True           </code></pre>\n\nWindows only show the connected &quot;linksys&quot; and &quot;linksys-guest&quot; networks.\r<br />\n<br />\nHow can I eliminate the duplicate &quot;linksys&quot; network.\r<br />\n<br />\nRegards,\r<br />\nJim<br />\n",
+    "PostedDate": "2013-11-02T16:48:30.983-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1248036",
+    "ThreadId": "465200",
+    "Html": "You need to create a collection and if network already added you can skip duplicate.<br />\n",
+    "PostedDate": "2014-05-21T09:15:53.383-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353200",
+    "ThreadId": "465200",
+    "Html": "fabcal, that is not a good solution. There could be multiple SSIDs named the same but from different APs with different security. <br />\n<br />\nEDIT: Figured it out.<br />\n",
+    "PostedDate": "2015-02-16T14:45:01.163-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353224",
+    "ThreadId": "465200",
+    "Html": "What I found is that you need to check against the Flags variable.<br />\nFlags=0 are SSIDs that are available.<br />\nFlags=2 means there is a profile on your PC but you are not connected to it.<br />\nFlags=3 means there is a profile on your PC and you are connected to it.<br />\n<br />\nSo what you are seeing is that you are connected to linksys, so the profile is on your PC and is listed (flags = 3)<br />\n<br />\nYou are also seeing that linksys and linksys-guest are available networks (flags=0)<br />\n<br />\nKyferEz<br />\n",
+    "PostedDate": "2015-02-16T17:12:19.033-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

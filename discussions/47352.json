@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "158473",
+    "ThreadId": "47352",
+    "Html": "Hello, <br>\r\nfirst of all thanks for your great API, that's nice to pick up some code like that.<br>\r\n<br>\r\nI can connect to networks that have a profile with my Wlan interface. <br>\r\n<br>\r\nBut, I want to connect to networks I've never been connected to before, that is I think I have to connect without a profile.<br>\r\nHere are some of the lines of code I tried: <br>\r\nmyInterface.Connect(Wlan.WlanConnectionMode.DiscoveryUnsecure, Wlan.Dot11BssType.Any, myNetwork.dot11Ssid, 0);<br>\r\nmyInterface.Connect(Wlan.WlanConnectionMode.DiscoverySecure, Wlan.Dot11BssType.Infrastructure, myNetwork.dot11Ssid, 0);<br>\r\nwith both secure and unsecure networks.<br>\r\n<br>\r\nAny idea of what I made wrong?<br>\r\nThanks a lot for your help<br>\r\n<br>\r\n",
+    "PostedDate": "2009-02-17T06:02:54.99-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

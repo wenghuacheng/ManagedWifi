@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "87225",
+    "ThreadId": "26069",
+    "Html": "\r\nHi everyone,<br /><br />I try to execute the sample code but I got the following thrown exception : <br />System.ComponentModel.Win32Exception in the GetAvailableNetworkList function (line 277 of Wlanapi.cs).<br />I got to program an ad hoc network utility and I need it to work :s<br />Thanks in advance<br />Valistar.<br />",
+    "PostedDate": "2008-04-16T14:41:15.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "91272",
+    "ThreadId": "26069",
+    "Html": "\r\nMe too, I have the same problem. The exception occured at:wlanapi.cs (line 634)<br /><br />Wlan.ThrowIfError(<br />\t\t\t\tWlan.WlanOpenHandle(Wlan.WLAN<i>CLIENT</i>VERSION<i>XP</i>SP2, IntPtr.Zero, out negotiatedVersion, out clientHandle));<br />",
+    "PostedDate": "2008-05-08T10:11:12.17-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "212920",
+    "ThreadId": "26069",
+    "Html": "<p>a bit late but ... the solution is to start the wireless zero configuration service in xp and the wireless auto something in vista.</p>\r\n<p>right click my computer -&gt; manage -&gt; services and ... -&gt; services -&gt; right click the service and click start</p>",
+    "PostedDate": "2009-07-17T01:24:22.243-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

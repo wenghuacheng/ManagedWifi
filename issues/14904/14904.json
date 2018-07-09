@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Fixed.",
+    "ClosedDate": "2009-11-19T05:44:18.943-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "public class WlanClient : IDisposable\n{\n  ...\n  ~WlanClient()\n  {\n    Close();\n  }\n \n  void IDisposable.Dispose()\n  {\n    GC.SuppressFinalize(this);\n   Close();\n  }\n \n  private void Close()\n  {\n    Wlan.WlanCloseHandle(clientHandle, IntPtr.Zero);\n  }\n  ...\n}\n \nAnd then use it :\nusing(var wlanClient = new WlanClient())\n{\n} // WlanCloseHandle",
+    "LastUpdatedDate": "2013-05-16T04:23:19.56-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2009-11-19T01:48:29.553-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Make WlanClient IDisposable",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 14904
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

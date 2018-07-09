@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "I&#39;ve fixed it in the source code, so try the latest.",
+    "ClosedDate": "2009-07-01T05:52:09.48-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The dot11CipherAlgorithm doesnt appear to enumerate the correct Cypher algoirthm.  It brings back CCMP (AES) when Im using TKIP and the dot11AuthAlgorithm doesnt appear to enumerate any auth protocol when Im using WPA-PSK, it just returns 0. \n \nBelow is the code Im using as a test from a client\n \nNativeWifi.WlanClient oWlan = new NativeWifi.WlanClient();\nConsole.WriteLine(oWlan.Interfaces[0].CurrentConnection.wlanSecurityAttributes.dot11AuthAlgorithm.ToString());\nConsole.WriteLine(oWlan.Interfaces[0].CurrentConnection.wlanSecurityAttributes.dot11CipherAlgorithm.ToString());",
+    "LastUpdatedDate": "2013-05-16T04:23:20.35-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "High",
+      "Severity": 150,
+      "Id": 3
+    },
+    "ProjectName": "managedwifi",
+    "ReportedDate": "2007-09-25T06:01:19.183-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "dot11CipherAlgorithm issues",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7135
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Ok, there was an incorrect definition of the WLAN_ASSOCIATION_ATTRIBUTES struct in MSDN, which caused the rest of the attributes to slide a bit. I've fixed it in the source code, so try the latest.",
+      "PostedDate": "2007-10-14T10:25:56.127-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2007-10-14T10:25:56.457-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-07-01T05:52:09.48-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:44:46.16-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:23:20.35-07:00",
+      "Id": -2147483648
+    }
+  ]
+}
